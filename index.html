@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Solenne — Leather Bags, Pillow Covers & Laptop Sleeves</title>
+  <meta name="description" content="Atelier Solenne: full-grain leather bags, hand-loomed pillow covers and leather laptop sleeves, made in small batches." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: '#1C1917',
+            alabaster: '#F6F3EE',
+            champagne: '#E6D2B0',
+            mist: '#8A9BB0',
+            terracotta: '#C47A5A',
+          },
+          boxShadow: {
+            glass: '0 8px 32px rgba(28,25,23,0.08), inset 0 1px 0 rgba(255,255,255,0.6)',
+            lift: '0 24px 60px -20px rgba(28,25,23,0.28)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root { --ink: #1C1917; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #F6F3EE;
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---------- Ambient mesh background ---------- */
+    .ambient {
+      position: fixed; inset: 0; z-index: -2; pointer-events: none;
+      background:
+        radial-gradient(at 10% 15%, rgba(230, 200, 150, 0.55) 0px, transparent 45%),
+        radial-gradient(at 90% 10%, rgba(132, 156, 190, 0.40) 0px, transparent 42%),
+        radial-gradient(at 82% 78%, rgba(204, 128, 96, 0.32) 0px, transparent 45%),
+        radial-gradient(at 15% 90%, rgba(140, 162, 192, 0.30) 0px, transparent 42%),
+        radial-gradient(at 50% 50%, rgba(240, 222, 192, 0.45) 0px, transparent 60%),
+        #F6F3EE;
+    }
+    .blob {
+      position: fixed; z-index: -1; pointer-events: none;
+      border-radius: 9999px; filter: blur(90px); opacity: 0.55;
+      animation: drift 26s ease-in-out infinite alternate;
+    }
+    .blob-a { width: 34rem; height: 34rem; top: -8rem; left: -10rem; background: #E8CFA4; }
+    .blob-b { width: 28rem; height: 28rem; top: 30%; right: -10rem; background: #9FB0C8; animation-delay: -8s; }
+    .blob-c { width: 30rem; height: 30rem; bottom: -10rem; left: 30%; background: #D9977A; opacity: 0.38; animation-delay: -16s; }
+    @keyframes drift {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(40px, -30px) scale(1.08); }
+      100% { transform: translate(-30px, 40px) scale(0.96); }
+    }
+
+    /* ---------- Glass surfaces ---------- */
+    .glass {
+      background: rgba(255, 255, 255, 0.48);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      backdrop-filter: blur(18px) saturate(140%);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: 0 8px 32px rgba(28, 25, 23, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+    .glass-strong {
+      background: rgba(255, 255, 255, 0.62);
+      -webkit-backdrop-filter: blur(24px) saturate(150%);
+      backdrop-filter: blur(24px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 24px 64px rgba(28, 25, 23, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+    .glass-soft {
+      background: rgba(255, 255, 255, 0.34);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    /* ---------- Details ---------- */
+    .eyebrow { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { scrollbar-width: none; }
+    .thin-scroll::-webkit-scrollbar { width: 6px; }
+    .thin-scroll::-webkit-scrollbar-thumb { background: rgba(28, 25, 23, 0.18); border-radius: 9999px; }
+
+    .img-zoom { transition: transform 900ms cubic-bezier(.2, .7, .2, 1); }
+    .group:hover .img-zoom { transform: scale(1.06); }
+
+    .card-enter { animation: cardIn 520ms cubic-bezier(.2, .7, .2, 1) both; }
+    @keyframes cardIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+    .bump { animation: bump 420ms ease; }
+    @keyframes bump { 0%{transform:scale(1)} 35%{transform:scale(1.35)} 100%{transform:scale(1)} }
+
+    /* Modal & drawer transitions */
+    #modal, #cartOverlay { transition: opacity 280ms ease; }
+    #modalPanel { transition: transform 320ms cubic-bezier(.2, .7, .2, 1), opacity 280ms ease; }
+    #cartDrawer { transition: transform 420ms cubic-bezier(.2, .7, .2, 1); }
+    #toast { transition: transform 320ms cubic-bezier(.2, .7, .2, 1), opacity 260ms ease; }
+
+    select.glass-select {
+      appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231C1917' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 0.9rem center;
+    }
+
+    :focus-visible { outline: 2px solid #1C1917; outline-offset: 3px; border-radius: 9999px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen antialiased selection:bg-champagne/60">
+  <!-- Ambient background layers -->
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="blob blob-a" aria-hidden="true"></div>
+  <div class="blob blob-b" aria-hidden="true"></div>
+  <div class="blob blob-c" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       1. FLOATING GLASS NAVBAR
+  ========================================================== -->
+  <header class="fixed top-4 inset-x-0 z-40 px-3 sm:px-4">
+    <nav class="glass max-w-7xl mx-auto rounded-full flex items-center justify-between gap-3 pl-5 pr-2 py-2" aria-label="Main">
+      <a href="#top" class="flex items-baseline gap-2 shrink-0" aria-label="Atelier Solenne home">
+        <span class="font-serif text-[1.7rem] leading-none font-semibold tracking-tight">Solenne</span>
+        <span class="hidden sm:inline eyebrow text-[0.58rem] text-stone-500">Atelier</span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium" id="navLinks">
+        <li><button data-nav-filter="all" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">All</button></li>
+        <li><button data-nav-filter="bags" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">Bags</button></li>
+        <li><button data-nav-filter="pillows" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">Pillow Covers</button></li>
+        <li><button data-nav-filter="sleeves" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">Laptop Sleeves</button></li>
+      </ul>
+
+      <div class="flex items-center gap-2 min-w-0">
+        <label class="relative flex items-center min-w-0" for="searchInput">
+          <span class="sr-only">Search products</span>
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 text-stone-500 pointer-events-none"></i>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Search the atelier…"
+            class="w-32 sm:w-52 md:w-64 rounded-full bg-white/55 border border-white/70 pl-10 pr-4 py-2.5 text-sm placeholder:text-stone-500 focus:outline-none focus:ring-2 focus:ring-ink/20 focus:bg-white/80 transition" />
+        </label>
+        <button id="cartButton" class="relative flex items-center gap-2 rounded-full bg-ink text-white pl-4 pr-3 py-2.5 text-sm font-medium hover:bg-stone-800 transition shrink-0" aria-label="Open shopping bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Bag</span>
+          <span id="cartCount" class="min-w-[1.4rem] h-[1.4rem] px-1 grid place-items-center rounded-full bg-white text-ink text-xs font-semibold">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="pt-24 sm:pt-28">
+
+    <!-- =========================================================
+         2. HERO
+    ========================================================== -->
+    <section class="max-w-7xl mx-auto px-3 sm:px-4" aria-labelledby="heroTitle">
+      <div class="relative rounded-[2.5rem] overflow-hidden h-[640px] md:h-[660px] shadow-lift">
+        <img src="images/1617326021886-53d6be1d7154.jpg"
+             alt="A sunlit living room with a soft white sofa beside a round table"
+             class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Lifestyle')" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#2a211a]/45 via-[#2a211a]/10 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#2a211a]/35 via-transparent to-transparent md:hidden"></div>
+
+        <!-- Floating info chip -->
+        <div class="hidden md:flex absolute top-8 right-8 glass rounded-2xl px-5 py-4 items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-white/70 grid place-items-center"><i data-lucide="scissors" class="w-4 h-4"></i></div>
+          <div>
+            <p class="text-sm font-semibold">Hand-finished in small batches</p>
+            <p class="text-xs text-stone-600">Each piece numbered and signed</p>
+          </div>
+        </div>
+
+        <div class="absolute inset-0 flex items-end md:items-center p-4 sm:p-8 md:p-14">
+          <div class="glass rounded-[2rem] p-7 sm:p-10 max-w-xl">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/60 border border-white/80 px-3.5 py-1.5 eyebrow text-[0.62rem]">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-terracotta"></i>
+              Autumn · Winter 2026 Collection
+            </span>
+            <h1 id="heroTitle" class="font-serif text-[2.7rem] sm:text-6xl leading-[0.98] font-medium mt-5 tracking-tight">
+              Quiet luxury,<br /><em class="font-normal">crafted to be lived with.</em>
+            </h1>
+            <p class="mt-5 text-[0.95rem] leading-relaxed text-stone-700 max-w-md">
+              Full-grain leather bags, hand-loomed pillow covers and laptop sleeves in a palette of
+              cognac, linen and stone. Made slowly, to soften and patina with you.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#catalog" class="group inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3.5 text-sm font-medium hover:bg-stone-800 transition">
+                Explore Catalog
+                <i data-lucide="arrow-right" class="w-4 h-4 transition group-hover:translate-x-1"></i>
+              </a>
+              <a href="#categories" class="inline-flex items-center gap-2 rounded-full bg-white/55 border border-white/80 px-6 py-3.5 text-sm font-medium hover:bg-white/80 transition">
+                <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                Browse Categories
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="glass rounded-3xl mt-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/60 text-sm">
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="truck" class="w-4 h-4 shrink-0"></i><span>Free shipping over $250</span></div>
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="shield-check" class="w-4 h-4 shrink-0"></i><span>Lifetime stitching warranty</span></div>
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="rotate-ccw" class="w-4 h-4 shrink-0"></i><span>30-day easy returns</span></div>
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="leaf" class="w-4 h-4 shrink-0"></i><span>Vegetable-tanned leathers</span></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. BENTO CATEGORY GRID
+    ========================================================== -->
+    <section id="categories" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24 scroll-mt-24" aria-labelledby="catTitle">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+        <div>
+          <p class="eyebrow text-stone-500">The Collections</p>
+          <h2 id="catTitle" class="font-serif text-4xl sm:text-5xl font-medium mt-3 tracking-tight">Three crafts, <em class="font-normal">one sensibility.</em></h2>
+        </div>
+        <p class="text-stone-600 max-w-sm text-[0.95rem] leading-relaxed">Pick a collection to filter the catalog below.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-5 md:h-[640px]">
+        <!-- Bags (large) -->
+        <button data-category="bags" class="bento group relative overflow-hidden rounded-[2rem] h-[420px] md:h-auto md:col-span-2 md:row-span-2 text-left shadow-glass">
+          <img src="images/1691480150204-66dd1eb77391.jpg"
+               alt="Brown leather handbag on a pale background" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Leather Bags')" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
+          <div class="absolute left-4 right-4 bottom-4 sm:left-6 sm:right-6 sm:bottom-6 glass rounded-2xl px-6 py-5 flex items-center justify-between gap-4">
+            <div>
+              <p class="eyebrow text-[0.62rem] text-stone-600" data-count="bags">— pieces</p>
+              <h3 class="font-serif text-3xl sm:text-4xl font-medium mt-1">Ladies Leather Bags</h3>
+              <p class="text-sm text-stone-700 mt-1">Structured totes, crossbody, bucket bags &amp; clutches</p>
+            </div>
+            <span class="w-12 h-12 shrink-0 rounded-full bg-ink text-white grid place-items-center transition group-hover:rotate-[-45deg]"><i data-lucide="arrow-right" class="w-5 h-5"></i></span>
+          </div>
+        </button>
+
+        <!-- Pillows -->
+        <button data-category="pillows" class="bento group relative overflow-hidden rounded-[2rem] h-[320px] md:h-auto text-left shadow-glass">
+          <img src="images/1632928312386-90d200fd4b7b.jpg"
+               alt="An armchair dressed with soft peach and tan cushions" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Pillow Covers')" />
+          <div class="absolute left-4 right-4 bottom-4 glass rounded-2xl px-5 py-4 flex items-center justify-between gap-3">
+            <div>
+              <p class="eyebrow text-[0.6rem] text-stone-600" data-count="pillows">— pieces</p>
+              <h3 class="font-serif text-2xl font-medium mt-0.5">Fabric Pillow Covers</h3>
+            </div>
+            <span class="w-10 h-10 shrink-0 rounded-full bg-white/80 grid place-items-center transition group-hover:bg-ink group-hover:text-white"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+          </div>
+        </button>
+
+        <!-- Sleeves -->
+        <button data-category="sleeves" class="bento group relative overflow-hidden rounded-[2rem] h-[320px] md:h-auto text-left shadow-glass">
+          <img src="images/1768511562691-571cbede6cc7.jpg"
+               alt="A dark brown leather folio with a wrap strap" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Laptop Sleeves')" />
+          <div class="absolute left-4 right-4 bottom-4 glass rounded-2xl px-5 py-4 flex items-center justify-between gap-3">
+            <div>
+              <p class="eyebrow text-[0.6rem] text-stone-600" data-count="sleeves">— pieces</p>
+              <h3 class="font-serif text-2xl font-medium mt-0.5">Leather Laptop Sleeves</h3>
+            </div>
+            <span class="w-10 h-10 shrink-0 rounded-full bg-white/80 grid place-items-center transition group-hover:bg-ink group-hover:text-white"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. INTERACTIVE CATALOG
+    ========================================================== -->
+    <section id="catalog" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24 scroll-mt-24" aria-labelledby="catalogTitle">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div>
+          <p class="eyebrow text-stone-500">Shop the Atelier</p>
+          <h2 id="catalogTitle" class="font-serif text-4xl sm:text-5xl font-medium mt-3 tracking-tight">The Catalog</h2>
+        </div>
+        <p id="resultCount" class="text-sm text-stone-600" aria-live="polite"></p>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="glass rounded-3xl md:rounded-full p-2 flex flex-col md:flex-row md:items-center md:justify-between gap-2 sticky top-[5.25rem] z-30">
+        <div class="flex gap-1 overflow-x-auto no-scrollbar" role="tablist" aria-label="Filter by category" id="tabs">
+          <button role="tab" data-tab="all" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">All</button>
+          <button role="tab" data-tab="bags" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Bags</button>
+          <button role="tab" data-tab="pillows" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Pillow Covers</button>
+          <button role="tab" data-tab="sleeves" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Laptop Sleeves</button>
+        </div>
+        <div class="flex items-center gap-2 px-1 md:px-0">
+          <span id="activeQuery" class="hidden items-center gap-1.5 rounded-full bg-white/70 border border-white/80 pl-3 pr-1.5 py-1.5 text-xs font-medium"></span>
+          <label for="sortSelect" class="text-xs text-stone-600 pl-2 hidden sm:block">Sort</label>
+          <select id="sortSelect" class="glass-select w-full md:w-auto rounded-full bg-white/60 border border-white/80 pl-4 pr-10 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ink/20 cursor-pointer">
+            <option value="featured">Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product grid -->
+      <div id="productGrid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6"></div>
+
+      <!-- Empty state -->
+      <div id="emptyState" class="hidden mt-8 glass rounded-[2rem] py-20 px-6 text-center">
+        <div class="w-14 h-14 mx-auto rounded-full bg-white/70 grid place-items-center"><i data-lucide="search-x" class="w-6 h-6"></i></div>
+        <h3 class="font-serif text-3xl mt-5">Nothing matches yet</h3>
+        <p id="emptyText" class="text-stone-600 mt-2 text-sm"></p>
+        <button id="clearFilters" class="mt-6 inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3 text-sm font-medium hover:bg-stone-800 transition">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Clear filters
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. CRAFTSMANSHIP
+    ========================================================== -->
+    <section id="craft" class="max-w-7xl mx-auto px-3 sm:px-4 pt-28 scroll-mt-24" aria-labelledby="craftTitle">
+      <div class="glass rounded-[2.5rem] p-3 sm:p-4 grid lg:grid-cols-2 gap-4">
+        <!-- Image side -->
+        <div class="relative rounded-[2rem] overflow-hidden min-h-[380px] lg:min-h-[620px]">
+          <img src="images/1473188588951-666fce8e7c68.jpg"
+               alt="Brown leather satchel resting on concrete beside a green plant" class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Craftsmanship')" />
+          <div class="absolute left-4 bottom-4 right-4 sm:right-auto glass rounded-2xl px-5 py-4 flex items-center gap-4 max-w-sm">
+            <div class="w-11 h-11 shrink-0 rounded-full bg-white/75 grid place-items-center"><i data-lucide="award" class="w-5 h-5"></i></div>
+            <div>
+              <p class="text-sm font-semibold">Tanned the slow way</p>
+              <p class="text-xs text-stone-600">Hides cured in oak-bark and mimosa tannins for 40 days</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy side -->
+        <div class="p-5 sm:p-8 lg:p-10 flex flex-col">
+          <p class="eyebrow text-stone-500">Craftsmanship</p>
+          <h2 id="craftTitle" class="font-serif text-4xl sm:text-5xl font-medium mt-3 tracking-tight leading-[1.02]">
+            Materials chosen <em class="font-normal">to outlast trends.</em>
+          </h2>
+          <p class="mt-5 text-stone-700 leading-relaxed text-[0.95rem]">
+            We work with two materials and know them well. Every bag and sleeve starts as a full hide,
+            and every pillow cover starts as linen woven on a hand loom.
+          </p>
+
+          <div class="mt-8 grid sm:grid-cols-2 gap-4">
+            <div class="glass-soft rounded-2xl p-5">
+              <div class="w-10 h-10 rounded-full bg-[#8B5A2B]/15 grid place-items-center"><i data-lucide="layers" class="w-4 h-4 text-[#6E3B23]"></i></div>
+              <h3 class="font-serif text-2xl mt-4">Full-grain cowhide</h3>
+              <p class="text-sm text-stone-600 mt-2 leading-relaxed">The top layer of the hide, kept whole with its natural grain. It is the strongest cut, and it darkens into a patina over the years.</p>
+            </div>
+            <div class="glass-soft rounded-2xl p-5">
+              <div class="w-10 h-10 rounded-full bg-mist/20 grid place-items-center"><i data-lucide="grip" class="w-4 h-4 text-[#4A5A70]"></i></div>
+              <h3 class="font-serif text-2xl mt-4">320 GSM hand-loomed linen</h3>
+              <p class="text-sm text-stone-600 mt-2 leading-relaxed">A heavy European flax linen, stonewashed until it feels soft and lived-in. It gets softer with every wash.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mt-auto pt-8">
+            <div class="glass rounded-2xl p-5">
+              <p class="font-serif text-4xl sm:text-5xl font-medium">1.6<span class="text-2xl">mm</span></p>
+              <p class="text-xs text-stone-600 mt-1 eyebrow">Hide thickness</p>
+            </div>
+            <div class="glass rounded-2xl p-5">
+              <p class="font-serif text-4xl sm:text-5xl font-medium">320</p>
+              <p class="text-xs text-stone-600 mt-1 eyebrow">GSM linen weight</p>
+            </div>
+            <div class="glass rounded-2xl p-5">
+              <p class="font-serif text-4xl sm:text-5xl font-medium">18<span class="text-2xl">h</span></p>
+              <p class="text-xs text-stone-600 mt-1 eyebrow">Hand-work per bag</p>
+            </div>
+            <div class="glass rounded-2xl p-5">
+              <p class="font-serif text-4xl sm:text-5xl font-medium">14</p>
+              <p class="text-xs text-stone-600 mt-1 eyebrow">Master artisans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       8. FOOTER
+  ========================================================== -->
+  <footer class="max-w-7xl mx-auto px-3 sm:px-4 pt-28 pb-8">
+    <div class="glass rounded-[2.5rem] p-8 sm:p-12">
+      <div class="grid gap-10 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="font-serif text-4xl font-semibold">Solenne</p>
+          <p class="mt-4 text-sm text-stone-600 leading-relaxed max-w-sm">
+            A small atelier making full-grain leather goods and hand-loomed textiles for everyday use.
+            Fewer pieces, made carefully, built to last.
+          </p>
+          <div class="flex gap-2 mt-6">
+            <a href="#top" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/60 border border-white/80 grid place-items-center hover:bg-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#top" aria-label="Pinterest" class="w-10 h-10 rounded-full bg-white/60 border border-white/80 grid place-items-center hover:bg-white transition"><i data-lucide="pin" class="w-4 h-4"></i></a>
+            <a href="#top" aria-label="Email" class="w-10 h-10 rounded-full bg-white/60 border border-white/80 grid place-items-center hover:bg-white transition"><i data-lucide="mail" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <p class="eyebrow text-stone-500">Shop</p>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><button data-footer-filter="bags" class="hover:underline underline-offset-4">Leather Bags</button></li>
+            <li><button data-footer-filter="pillows" class="hover:underline underline-offset-4">Pillow Covers</button></li>
+            <li><button data-footer-filter="sleeves" class="hover:underline underline-offset-4">Laptop Sleeves</button></li>
+            <li><button data-footer-filter="all" class="hover:underline underline-offset-4">All Products</button></li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <p class="eyebrow text-stone-500">Atelier</p>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#craft" class="hover:underline underline-offset-4">Craftsmanship</a></li>
+            <li><a href="#categories" class="hover:underline underline-offset-4">Collections</a></li>
+            <li><a href="#top" class="hover:underline underline-offset-4">Care Guide</a></li>
+            <li><a href="#top" class="hover:underline underline-offset-4">Shipping &amp; Returns</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <p class="eyebrow text-stone-500">Letters from the studio</p>
+          <form id="newsletter" class="mt-4 flex gap-2">
+            <label for="newsEmail" class="sr-only">Email address</label>
+            <input id="newsEmail" type="email" required placeholder="Email address" class="min-w-0 flex-1 rounded-full bg-white/60 border border-white/80 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink/20" />
+            <button class="rounded-full bg-ink text-white w-11 h-11 shrink-0 grid place-items-center hover:bg-stone-800 transition" aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+          </form>
+          <p class="text-xs text-stone-500 mt-3">New releases and restocks, about once a month.</p>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-white/70 flex flex-col sm:flex-row justify-between gap-3 text-xs text-stone-500">
+        <p>© <span id="year"></span> Atelier Solenne. All rights reserved.</p>
+        <p>Photography: <a href="https://unsplash.com" target="_blank" rel="noopener" class="underline underline-offset-4 hover:text-ink">Unsplash</a> (free license) · Privacy · Terms</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       5. PRODUCT QUICK-VIEW MODAL
+  ========================================================== -->
+  <div id="modal" class="fixed inset-0 z-50 hidden opacity-0" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="absolute inset-0 bg-[#1C1917]/30 backdrop-blur-sm" data-close-modal></div>
+    <div class="relative h-full w-full flex items-center justify-center p-3 sm:p-6 pointer-events-none">
+      <div id="modalPanel" class="glass-strong pointer-events-auto relative w-full max-w-5xl max-h-[92vh] overflow-y-auto thin-scroll rounded-[2rem] grid md:grid-cols-2 translate-y-6 opacity-0">
+        <button class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/80 border border-white grid place-items-center hover:bg-white transition" data-close-modal aria-label="Close quick view">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+        <div class="relative p-3 md:p-4">
+          <div class="relative rounded-[1.6rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-full md:min-h-[560px]">
+            <img id="modalImg" src="" alt="" class="absolute inset-0 w-full h-full object-cover" />
+            <span id="modalBadge" class="absolute top-4 left-4 glass rounded-full px-3 py-1.5 text-xs font-semibold hidden"></span>
+          </div>
+        </div>
+        <div class="p-6 sm:p-8 md:pl-4 md:pr-10 md:py-10 flex flex-col">
+          <p id="modalCategory" class="eyebrow text-stone-500"></p>
+          <h3 id="modalTitle" class="font-serif text-4xl sm:text-[2.75rem] leading-[1.02] font-medium mt-3 pr-10"></h3>
+          <p id="modalPrice" class="text-2xl font-semibold mt-3"></p>
+          <p id="modalDesc" class="text-stone-700 text-[0.95rem] leading-relaxed mt-5"></p>
+
+          <div class="mt-6">
+            <p class="text-sm font-medium">Colour — <span id="modalColorName" class="text-stone-600 font-normal"></span></p>
+            <div id="modalSwatches" class="flex gap-2.5 mt-3"></div>
+          </div>
+
+          <dl class="mt-6 glass-soft rounded-2xl divide-y divide-white/70 text-sm">
+            <div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600 flex items-center gap-2"><i data-lucide="gem" class="w-4 h-4"></i>Material</dt><dd id="modalMaterial" class="text-right font-medium"></dd></div>
+            <div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600 flex items-center gap-2"><i data-lucide="ruler" class="w-4 h-4"></i>Dimensions</dt><dd id="modalDims" class="text-right font-medium"></dd></div>
+            <div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4"></i>Style</dt><dd id="modalType" class="text-right font-medium"></dd></div>
+          </dl>
+
+          <div class="mt-6 flex gap-3">
+            <div class="flex items-center rounded-full bg-white/70 border border-white">
+              <button id="modalMinus" class="w-11 h-12 grid place-items-center rounded-l-full hover:bg-white transition" aria-label="Decrease quantity"><i data-lucide="minus" class="w-4 h-4"></i></button>
+              <span id="modalQty" class="w-8 text-center font-semibold" aria-live="polite">1</span>
+              <button id="modalPlus" class="w-11 h-12 grid place-items-center rounded-r-full hover:bg-white transition" aria-label="Increase quantity"><i data-lucide="plus" class="w-4 h-4"></i></button>
+            </div>
+            <button id="modalAdd" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-ink text-white px-6 h-12 text-sm font-medium hover:bg-stone-800 transition">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i> Add to Bag
+            </button>
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 gap-3 text-xs text-stone-600">
+            <p class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4"></i>Ships in 2–4 days</p>
+            <p class="flex items-center gap-2"><i data-lucide="gift" class="w-4 h-4"></i>Complimentary gift wrap</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       7. SLIDE-OVER CART DRAWER
+  ========================================================== -->
+  <div id="cartOverlay" class="fixed inset-0 z-50 bg-[#1C1917]/25 backdrop-blur-[2px] hidden opacity-0" data-close-cart></div>
+  <aside id="cartDrawer" class="fixed inset-y-0 right-0 z-50 w-full sm:max-w-md p-2 sm:p-3 translate-x-full" aria-label="Shopping bag" aria-hidden="true">
+    <div class="glass-strong h-full rounded-[2rem] flex flex-col overflow-hidden">
+      <div class="flex items-center justify-between px-6 pt-6 pb-4">
+        <div>
+          <h2 class="font-serif text-3xl font-medium">Your Bag</h2>
+          <p id="cartItemsLabel" class="text-xs text-stone-600 mt-0.5">0 items</p>
+        </div>
+        <button class="w-10 h-10 rounded-full bg-white/80 border border-white grid place-items-center hover:bg-white transition" data-close-cart aria-label="Close bag"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+
+      <!-- Free shipping progress -->
+      <div class="mx-6 glass-soft rounded-2xl px-4 py-3">
+        <p id="shipMsg" class="text-xs font-medium"></p>
+        <div class="mt-2 h-1.5 rounded-full bg-white/70 overflow-hidden"><div id="shipBar" class="h-full bg-ink rounded-full transition-all duration-500" style="width:0%"></div></div>
+      </div>
+
+      <div id="cartList" class="flex-1 overflow-y-auto thin-scroll px-6 py-4 space-y-3"></div>
+
+      <div id="cartEmpty" class="hidden flex-1 flex-col items-center justify-center text-center px-8">
+        <div class="w-16 h-16 rounded-full bg-white/70 grid place-items-center"><i data-lucide="shopping-bag" class="w-6 h-6"></i></div>
+        <p class="font-serif text-2xl mt-5">Your bag is empty</p>
+        <p class="text-sm text-stone-600 mt-1">Browse the catalog to add a few pieces.</p>
+        <button data-close-cart data-goto-catalog class="mt-6 rounded-full bg-ink text-white px-6 py-3 text-sm font-medium hover:bg-stone-800 transition">Continue browsing</button>
+      </div>
+
+      <div id="cartFooter" class="px-6 pb-6 pt-4 border-t border-white/70">
+        <div class="flex justify-between text-sm text-stone-600"><span>Shipping</span><span id="cartShipping">—</span></div>
+        <div class="flex justify-between items-baseline mt-2">
+          <span class="font-medium">Subtotal</span>
+          <span id="cartSubtotal" class="font-serif text-3xl font-semibold">$0</span>
+        </div>
+        <button id="checkoutBtn" class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink text-white py-4 text-sm font-medium hover:bg-stone-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i data-lucide="lock" class="w-4 h-4"></i> Secure Checkout
+        </button>
+        <p class="text-[0.7rem] text-center text-stone-500 mt-3">Taxes calculated at checkout · 30-day returns</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 z-[60] glass-strong rounded-full pl-2 pr-5 py-2 flex items-center gap-3 text-sm pointer-events-none" role="status" aria-live="polite">
+    <span class="w-8 h-8 shrink-0 rounded-full bg-ink text-white grid place-items-center"><i data-lucide="check" class="w-4 h-4"></i></span>
+    <span id="toastText"></span>
+  </div>
+
+  <!-- =========================================================
+       SCRIPT
+  ========================================================== -->
+  <script>
+    /* ---------- Helpers ---------- */
+    const img = (id) => `images/${id}.jpg`; // photos bundled with the page (free Unsplash license)
+    const money = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+    const refreshIcons = () => { if (window.lucide) lucide.createIcons(); };
+
+    // If an image fails to load, swap in a soft gradient placeholder so the layout never breaks.
+    function fallbackImg(el, label) {
+      el.onerror = null;
+      const text = esc(label || el.alt || 'Atelier Solenne');
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1000' viewBox='0 0 800 1000'>
+        <defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+          <stop offset='0' stop-color='#EADBC2'/><stop offset='.55' stop-color='#D9C7B4'/><stop offset='1' stop-color='#B9C3D0'/>
+        </linearGradient></defs>
+        <rect width='800' height='1000' fill='url(#g)'/>
+        <text x='400' y='510' text-anchor='middle' font-family='Georgia,serif' font-size='44' fill='#1C1917' opacity='.55'>${text}</text>
+      </svg>`;
+      el.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+
+    /* ---------- Data ---------- */
+    const C = {
+      cognac: { name: 'Cognac', hex: '#8B5A2B' }, espresso: { name: 'Espresso', hex: '#3E2A1F' },
+      bone: { name: 'Bone', hex: '#E9DFCF' }, tan: { name: 'Tan', hex: '#B07A4A' }, noir: { name: 'Noir', hex: '#1C1917' },
+      sage: { name: 'Sage', hex: '#9AA58C' }, chestnut: { name: 'Chestnut', hex: '#6E3B23' }, taupe: { name: 'Taupe', hex: '#A08C7A' },
+      midnight: { name: 'Midnight', hex: '#26344A' }, blush: { name: 'Blush', hex: '#D9B8A8' }, dove: { name: 'Dove Grey', hex: '#9C9A96' },
+      ivory: { name: 'Ivory', hex: '#F2EDE4' }, oat: { name: 'Oat', hex: '#D9CBB3' }, stone: { name: 'Stone', hex: '#B9B2A6' },
+      chalk: { name: 'Chalk', hex: '#EFEBE3' }, clay: { name: 'Clay', hex: '#C9A48A' }, slate: { name: 'Slate Blue', hex: '#7D8B9C' },
+      terracotta: { name: 'Terracotta', hex: '#C47A5A' }, indigo: { name: 'Indigo', hex: '#3B4A6B' }, saffron: { name: 'Saffron', hex: '#D4A24C' },
+      persimmon: { name: 'Persimmon', hex: '#D0784E' }, pearl: { name: 'Pearl', hex: '#EEE8DD' },
+    };
+
+    const CATEGORY_LABELS = { bags: 'Leather Bags', pillows: 'Pillow Covers', sleeves: 'Laptop Sleeves' };
+
+    const PRODUCTS = [
+      { id: 'b1', name: 'Aurelia Structured Tote', category: 'bags', type: 'Structured Tote', price: 385, rank: 1, badge: 'Bestseller',
+        material: 'Full-grain vegetable-tanned cowhide', dims: '34 × 28 × 14 cm',
+        desc: 'A clean-lined tote with a reinforced base and an inner zip pocket. It holds a 13″ laptop, and the vegetable-tanned hide darkens to a warm patina.',
+        colors: [C.cognac, C.espresso, C.bone], photo: '1624687943971-e86af76d57de' },
+      { id: 'b2', name: 'Sienna Crossbody', category: 'bags', type: 'Crossbody', price: 245, rank: 3, badge: 'New',
+        material: 'Pebbled full-grain leather, solid brass', dims: '22 × 16 × 7 cm · 120 cm strap',
+        desc: 'An everyday crossbody with an adjustable strap and a magnetic flap. It holds a phone, wallet, keys and a small notebook.',
+        colors: [C.tan, C.noir, C.sage], photo: '1718622795525-2295971921ba' },
+      { id: 'b3', name: 'Odette Bucket Bag', category: 'bags', type: 'Bucket Bag', price: 295, rank: 5,
+        material: 'Drum-dyed nappa cowhide, suede lining', dims: '24 × 26 × 18 cm',
+        desc: 'A soft, slouchy bucket bag with a drawstring top and a detachable inner pouch. The nappa is drum-dyed through, so scuffs stay the same colour.',
+        colors: [C.noir, C.chestnut, C.taupe], photo: '1702325107940-88f9cd4468c2' },
+      { id: 'b4', name: 'Celeste Evening Clutch', category: 'bags', type: 'Clutch', price: 175, rank: 7,
+        material: 'Glazed calf leather, magnetic closure', dims: '27 × 15 × 4 cm',
+        desc: 'A slim clutch in glazed calf with hand-painted edges. A hidden wrist strap tucks inside when you carry it in hand.',
+        colors: [C.espresso, C.noir, C.blush], photo: '1749294435694-ce3c586591e6' },
+      { id: 'b5', name: 'Maren Buckled Satchel', category: 'bags', type: 'Structured Satchel', price: 345, rank: 2, badge: 'Limited',
+        material: 'Full-grain leather, gilded buckles', dims: '30 × 22 × 11 cm',
+        desc: 'A structured satchel with twin buckles and a top handle. It has a removable shoulder strap and three inner compartments.',
+        colors: [C.dove, C.cognac], photo: '1605733513597-a8f8341084e6' },
+
+      { id: 'p1', name: 'Nuage Bouclé Cover', category: 'pillows', type: 'Textured Bouclé', price: 68, rank: 4, badge: 'Bestseller',
+        material: 'Wool-blend bouclé, hidden zip', dims: '50 × 50 cm',
+        desc: 'A looped bouclé with a soft, cloud-like texture. The concealed zip and piped edges keep it neat on a sofa or bed.',
+        colors: [C.ivory, C.oat, C.stone], photo: '1629949009765-40fc74c9ec21' },
+      { id: 'p2', name: 'Rivage Stonewashed Linen', category: 'pillows', type: 'Stonewashed Linen', price: 58, rank: 6,
+        material: '320 GSM hand-loomed flax linen', dims: '45 × 45 cm',
+        desc: 'Heavyweight linen, stonewashed for a relaxed, rumpled finish. It is breathable year-round and gets softer each wash.',
+        colors: [C.chalk, C.clay, C.slate], photo: '1611490135455-3a02bb9eb653' },
+      { id: 'p3', name: 'Anatolia Woven Kilim', category: 'pillows', type: 'Woven Kilim', price: 92, rank: 9, badge: 'Artisan',
+        material: 'Hand-woven wool kilim, linen back', dims: '40 × 60 cm',
+        desc: 'A flat-woven kilim in a geometric pattern, backed in natural linen. Because each one is woven by hand, no two are exactly alike.',
+        colors: [C.terracotta, C.indigo, C.saffron], photo: '1557502236-b389b3a38a7d' },
+      { id: 'p4', name: 'Soie Raw Silk Cover', category: 'pillows', type: 'Raw Silk', price: 84, rank: 10,
+        material: 'Raw dupioni silk, cotton sateen back', dims: '50 × 50 cm',
+        desc: 'Raw silk with a natural slub and a quiet sheen that shifts in the light. Backed in cotton sateen for durability.',
+        colors: [C.pearl, C.persimmon, C.sage], photo: '1611489704434-2612dc89c992' },
+
+      { id: 's1', name: 'Verso 13″ Sleeve', category: 'sleeves', type: 'Full-grain Sleeve · 13″', price: 145, rank: 8,
+        material: 'Full-grain cowhide, merino felt lining', dims: '33 × 24 × 1.5 cm · fits 13″ laptops',
+        desc: 'A slim sleeve cut from one piece of hide and lined with merino felt to protect against scratches. The edges are hand-burnished.',
+        colors: [C.noir, C.cognac], photo: '1657603571233-5e9860e96d00' },
+      { id: 's2', name: 'Verso 14″ Zip Folio', category: 'sleeves', type: 'Zippered Folio · 14″', price: 185, rank: 11, badge: 'New',
+        material: 'Full-grain cowhide, YKK zip, microsuede', dims: '35 × 26 × 2.5 cm · fits 14″ laptops',
+        desc: 'A zippered folio with a carry handle and a front pocket for a charger, cables and notes.',
+        colors: [C.cognac, C.noir, C.espresso], photo: '1688296524524-9ae7601f0877' },
+      { id: 's3', name: 'Verso 16″ Sleeve', category: 'sleeves', type: 'Full-grain Sleeve · 16″', price: 175, rank: 12,
+        material: 'Full-grain cowhide, merino felt lining', dims: '38 × 28 × 1.6 cm · fits 16″ laptops',
+        desc: 'The larger Verso, with a closure strap and a hidden magnet. It is cut for 16″ laptops and padded at the corners.',
+        colors: [C.espresso, C.tan, C.noir], photo: '1657603635372-023411921d31' },
+    ];
+
+    const byId = (id) => PRODUCTS.find((p) => p.id === id);
+
+    /* ---------- State ---------- */
+    const FREE_SHIP = 250;
+    const state = { category: 'all', sort: 'featured', query: '', cart: loadCart() };
+    const modalState = { id: null, color: 0, qty: 1 };
+
+    function loadCart() {
+      try { return JSON.parse(localStorage.getItem('solenne-cart') || '[]').filter((i) => i && byId(i.id) && i.qty > 0); }
+      catch (e) { return []; }
+    }
+    function saveCart() {
+      try { localStorage.setItem('solenne-cart', JSON.stringify(state.cart)); } catch (e) { /* storage unavailable */ }
+    }
+
+    /* ---------- Catalog rendering ---------- */
+    function visibleProducts() {
+      const q = state.query.trim().toLowerCase();
+      let list = PRODUCTS.filter((p) => state.category === 'all' || p.category === state.category);
+      if (q) {
+        list = list.filter((p) =>
+          [p.name, p.type, p.material, CATEGORY_LABELS[p.category], p.colors.map((c) => c.name).join(' ')]
+            .join(' ').toLowerCase().includes(q));
+      }
+      const sorters = {
+        featured: (a, b) => a.rank - b.rank,
+        low: (a, b) => a.price - b.price || a.rank - b.rank,
+        high: (a, b) => b.price - a.price || a.rank - b.rank,
+      };
+      return list.sort(sorters[state.sort]);
+    }
+
+    function productCard(p, i) {
+      const swatches = p.colors.map((c) =>
+        `<span class="w-3.5 h-3.5 rounded-full ring-1 ring-black/10 ring-offset-1 ring-offset-white/40" style="background:${c.hex}" title="${esc(c.name)}"></span>`).join('');
+      return `
+      <article class="card-enter group glass rounded-[1.75rem] p-2.5 flex flex-col cursor-pointer hover:-translate-y-1 hover:shadow-lift transition duration-300"
+               style="animation-delay:${Math.min(i, 8) * 45}ms" data-open="${p.id}" tabindex="0" role="button" aria-label="Quick view ${esc(p.name)}">
+        <div class="relative aspect-[4/5] rounded-[1.35rem] overflow-hidden bg-white/40">
+          <img src="${img(p.photo, 700)}" alt="${esc(p.name)}" loading="lazy" class="img-zoom w-full h-full object-cover" onerror="fallbackImg(this,'${esc(CATEGORY_LABELS[p.category])}')" />
+          <span class="absolute top-3 left-3 glass rounded-full px-3 py-1 text-[0.68rem] font-semibold">${esc(CATEGORY_LABELS[p.category])}</span>
+          ${p.badge ? `<span class="absolute top-3 right-3 rounded-full bg-ink text-white px-3 py-1 text-[0.68rem] font-semibold">${esc(p.badge)}</span>` : ''}
+          <span class="absolute inset-x-3 bottom-3 glass rounded-full py-2 text-xs font-medium flex items-center justify-center gap-1.5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+            <i data-lucide="eye" class="w-3.5 h-3.5"></i> Quick view
+          </span>
+        </div>
+        <div class="px-2.5 pt-4 pb-2 flex flex-col flex-1">
+          <p class="text-[0.7rem] uppercase tracking-[0.16em] text-stone-500 font-semibold">${esc(p.type)}</p>
+          <h3 class="font-serif text-[1.45rem] leading-tight font-medium mt-1">${esc(p.name)}</h3>
+          <p class="text-xs text-stone-600 mt-1.5 leading-relaxed">${esc(p.material)}<br><span class="text-stone-500">${esc(p.dims)}</span></p>
+          <div class="flex items-center gap-2 mt-3">${swatches}</div>
+          <div class="flex items-center justify-between mt-auto pt-4">
+            <span class="text-lg font-semibold">${money(p.price)}</span>
+            <button data-add="${p.id}" class="inline-flex items-center gap-1 rounded-full bg-ink text-white pl-3 pr-4 py-2 text-xs font-semibold hover:bg-stone-800 active:scale-95 transition" aria-label="Add ${esc(p.name)} to bag">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>`;
+    }
+
+    function renderCatalog() {
+      const list = visibleProducts();
+      $('#productGrid').innerHTML = list.map(productCard).join('');
+      $('#productGrid').classList.toggle('hidden', list.length === 0);
+      $('#emptyState').classList.toggle('hidden', list.length !== 0);
+
+      const catText = state.category === 'all' ? 'all collections' : CATEGORY_LABELS[state.category].toLowerCase();
+      $('#resultCount').textContent = `Showing ${list.length} ${list.length === 1 ? 'piece' : 'pieces'} from ${catText}`;
+      $('#emptyText').textContent = state.query.trim()
+        ? `No results for "${state.query.trim()}" in ${catText}. Try another word or clear the filters.`
+        : 'Try another category.';
+
+      // Active query chip
+      const chip = $('#activeQuery');
+      if (state.query.trim()) {
+        chip.innerHTML = `“${esc(state.query.trim())}” <button id="clearQuery" class="w-5 h-5 rounded-full grid place-items-center hover:bg-stone-200" aria-label="Clear search"><i data-lucide="x" class="w-3 h-3"></i></button>`;
+        chip.classList.remove('hidden'); chip.classList.add('inline-flex');
+      } else {
+        chip.classList.add('hidden'); chip.classList.remove('inline-flex');
+      }
+
+      // Tabs + nav link states
+      $$('.tab').forEach((t) => {
+        const on = t.dataset.tab === state.category;
+        t.setAttribute('aria-selected', on);
+        t.classList.toggle('bg-ink', on); t.classList.toggle('text-white', on);
+        t.classList.toggle('hover:bg-white/60', !on);
+      });
+      $$('.nav-link').forEach((l) => {
+        const on = l.dataset.navFilter === state.category;
+        l.classList.toggle('bg-white/70', on);
+        l.classList.toggle('shadow-sm', on);
+      });
+      refreshIcons();
+    }
+
+    function setCategory(cat, scroll = true) {
+      state.category = cat;
+      renderCatalog();
+      if (scroll) $('#catalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* ---------- Quick-view modal ---------- */
+    let lastFocus = null;
+
+    function openModal(id) {
+      const p = byId(id); if (!p) return;
+      lastFocus = document.activeElement;
+      Object.assign(modalState, { id, color: 0, qty: 1 });
+
+      const mImg = $('#modalImg');
+      mImg.onerror = () => fallbackImg(mImg, CATEGORY_LABELS[p.category]);
+      mImg.src = img(p.photo, 1200); mImg.alt = p.name;
+      $('#modalCategory').textContent = CATEGORY_LABELS[p.category];
+      $('#modalTitle').textContent = p.name;
+      $('#modalPrice').textContent = money(p.price);
+      $('#modalDesc').textContent = p.desc;
+      $('#modalMaterial').textContent = p.material;
+      $('#modalDims').textContent = p.dims;
+      $('#modalType').textContent = p.type;
+      const badge = $('#modalBadge');
+      badge.textContent = p.badge || ''; badge.classList.toggle('hidden', !p.badge);
+      renderModalSwatches();
+      $('#modalQty').textContent = '1';
+
+      const modal = $('#modal'), panel = $('#modalPanel');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => {
+        modal.classList.remove('opacity-0');
+        panel.classList.remove('translate-y-6', 'opacity-0');
+      });
+      panel.scrollTop = 0;
+      setTimeout(() => $('#modalAdd').focus({ preventScroll: true }), 50);
+      refreshIcons();
+    }
+
+    function renderModalSwatches() {
+      const p = byId(modalState.id);
+      $('#modalSwatches').innerHTML = p.colors.map((c, i) => `
+        <button data-swatch="${i}" aria-label="${esc(c.name)}" aria-pressed="${i === modalState.color}"
+          class="w-9 h-9 rounded-full ring-offset-2 ring-offset-white/60 transition ${i === modalState.color ? 'ring-2 ring-ink' : 'ring-1 ring-black/10 hover:ring-black/30'}"
+          style="background:${c.hex}"></button>`).join('');
+      $('#modalColorName').textContent = p.colors[modalState.color].name;
+    }
+
+    function closeModal() {
+      const modal = $('#modal'), panel = $('#modalPanel');
+      if (modal.classList.contains('hidden')) return;
+      modal.classList.add('opacity-0');
+      panel.classList.add('translate-y-6', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        if (!isCartOpen()) document.body.style.overflow = '';
+        if (lastFocus && document.body.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+      }, 280);
+    }
+
+    /* ---------- Cart ---------- */
+    function addToCart(id, colorIndex = 0, qty = 1) {
+      const p = byId(id); if (!p) return;
+      const color = p.colors[colorIndex].name;
+      const key = `${id}::${color}`;
+      const existing = state.cart.find((i) => i.key === key);
+      if (existing) existing.qty += qty;
+      else state.cart.push({ key, id, color, qty });
+      saveCart(); renderCart();
+      const badge = $('#cartCount');
+      badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
+      showToast(`${p.name} (${color}) added to your bag`);
+    }
+
+    function changeQty(key, delta) {
+      const item = state.cart.find((i) => i.key === key); if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) state.cart = state.cart.filter((i) => i.key !== key);
+      saveCart(); renderCart();
+    }
+
+    function removeItem(key) {
+      state.cart = state.cart.filter((i) => i.key !== key);
+      saveCart(); renderCart();
+    }
+
+    function renderCart() {
+      const count = state.cart.reduce((s, i) => s + i.qty, 0);
+      const subtotal = state.cart.reduce((s, i) => s + byId(i.id).price * i.qty, 0);
+      $('#cartCount').textContent = count;
+      $('#cartItemsLabel').textContent = `${count} ${count === 1 ? 'item' : 'items'}`;
+      $('#cartSubtotal').textContent = money(subtotal);
+
+      const remaining = Math.max(0, FREE_SHIP - subtotal);
+      $('#shipMsg').innerHTML = count === 0
+        ? `Free shipping on orders over ${money(FREE_SHIP)}`
+        : remaining > 0
+          ? `You're <strong>${money(remaining)}</strong> away from free shipping`
+          : `You've unlocked free shipping ✦`;
+      $('#shipBar').style.width = Math.min(100, (subtotal / FREE_SHIP) * 100) + '%';
+      $('#cartShipping').textContent = count === 0 ? '—' : remaining > 0 ? 'Calculated at checkout' : 'Free';
+
+      const empty = count === 0;
+      $('#cartList').classList.toggle('hidden', empty);
+      $('#cartEmpty').classList.toggle('hidden', !empty);
+      $('#cartEmpty').classList.toggle('flex', empty);
+      $('#checkoutBtn').disabled = empty;
+
+      $('#cartList').innerHTML = state.cart.map((item) => {
+        const p = byId(item.id);
+        const hex = (p.colors.find((c) => c.name === item.color) || p.colors[0]).hex;
+        return `
+        <div class="glass rounded-2xl p-2.5 flex gap-3">
+          <img src="${img(p.photo, 240)}" alt="${esc(p.name)}" class="w-20 h-24 rounded-xl object-cover shrink-0" onerror="fallbackImg(this,'${esc(CATEGORY_LABELS[p.category])}')" />
+          <div class="flex-1 min-w-0 flex flex-col py-0.5">
+            <div class="flex justify-between gap-2">
+              <p class="font-serif text-lg leading-tight font-medium truncate">${esc(p.name)}</p>
+              <button data-remove="${esc(item.key)}" class="w-7 h-7 shrink-0 rounded-full grid place-items-center text-stone-500 hover:bg-white/80 hover:text-ink transition" aria-label="Remove ${esc(p.name)}"><i data-lucide="trash-2" class="w-3.5 h-3.5"></i></button>
+            </div>
+            <p class="text-xs text-stone-600 flex items-center gap-1.5 mt-0.5"><span class="w-2.5 h-2.5 rounded-full ring-1 ring-black/10" style="background:${hex}"></span>${esc(item.color)} · ${money(p.price)}</p>
+            <div class="flex items-center justify-between mt-auto pt-2">
+              <div class="flex items-center rounded-full bg-white/70 border border-white">
+                <button data-dec="${esc(item.key)}" class="w-8 h-8 grid place-items-center rounded-full hover:bg-white transition" aria-label="Decrease quantity"><i data-lucide="minus" class="w-3.5 h-3.5"></i></button>
+                <span class="w-6 text-center text-sm font-semibold">${item.qty}</span>
+                <button data-inc="${esc(item.key)}" class="w-8 h-8 grid place-items-center rounded-full hover:bg-white transition" aria-label="Increase quantity"><i data-lucide="plus" class="w-3.5 h-3.5"></i></button>
+              </div>
+              <span class="text-sm font-semibold">${money(p.price * item.qty)}</span>
+            </div>
+          </div>
+        </div>`;
+      }).join('');
+      refreshIcons();
+    }
+
+    const isCartOpen = () => !$('#cartDrawer').classList.contains('translate-x-full');
+
+    function openCart() {
+      const overlay = $('#cartOverlay');
+      overlay.classList.remove('hidden');
+      requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+      $('#cartDrawer').classList.remove('translate-x-full');
+      $('#cartDrawer').setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCart() {
+      const overlay = $('#cartOverlay');
+      overlay.classList.add('opacity-0');
+      $('#cartDrawer').classList.add('translate-x-full');
+      $('#cartDrawer').setAttribute('aria-hidden', 'true');
+      setTimeout(() => overlay.classList.add('hidden'), 280);
+      if ($('#modal').classList.contains('hidden')) document.body.style.overflow = '';
+    }
+
+    /* ---------- Toast ---------- */
+    let toastTimer;
+    function showToast(msg) {
+      $('#toastText').textContent = msg;
+      const t = $('#toast');
+      t.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.add('translate-y-24', 'opacity-0'), 2400);
+    }
+
+    /* ---------- Event wiring ---------- */
+    document.addEventListener('click', (e) => {
+      const t = e.target;
+
+      const addBtn = t.closest('[data-add]');
+      if (addBtn) { e.stopPropagation(); addToCart(addBtn.dataset.add); return; }
+
+      const card = t.closest('[data-open]');
+      if (card) { openModal(card.dataset.open); return; }
+
+      const bento = t.closest('[data-category]');
+      if (bento) { setCategory(bento.dataset.category); return; }
+
+      const tab = t.closest('[data-tab]');
+      if (tab) { setCategory(tab.dataset.tab, false); return; }
+
+      const nav = t.closest('[data-nav-filter]');
+      if (nav) { setCategory(nav.dataset.navFilter); return; }
+
+      const foot = t.closest('[data-footer-filter]');
+      if (foot) { setCategory(foot.dataset.footerFilter); return; }
+
+      if (t.closest('#clearQuery')) { $('#searchInput').value = ''; state.query = ''; renderCatalog(); return; }
+
+      const sw = t.closest('[data-swatch]');
+      if (sw) { modalState.color = Number(sw.dataset.swatch); renderModalSwatches(); return; }
+
+      if (t.closest('[data-close-modal]')) { closeModal(); return; }
+
+      if (t.closest('[data-close-cart]')) {
+        const goCatalog = !!t.closest('[data-goto-catalog]');
+        closeCart();
+        if (goCatalog) setTimeout(() => $('#catalog').scrollIntoView({ behavior: 'smooth' }), 150);
+        return;
+      }
+
+      const inc = t.closest('[data-inc]'); if (inc) { changeQty(inc.dataset.inc, 1); return; }
+      const dec = t.closest('[data-dec]'); if (dec) { changeQty(dec.dataset.dec, -1); return; }
+      const rem = t.closest('[data-remove]'); if (rem) { removeItem(rem.dataset.remove); return; }
+    });
+
+    // Keyboard: open cards with Enter/Space, close overlays with Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!$('#modal').classList.contains('hidden')) closeModal();
+        else if (isCartOpen()) closeCart();
+        return;
+      }
+      const card = e.target.closest && e.target.closest('[data-open]');
+      if (card && e.target === card && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault(); openModal(card.dataset.open);
+      }
+    });
+
+    $('#cartButton').addEventListener('click', openCart);
+
+    $('#searchInput').addEventListener('input', (e) => { state.query = e.target.value; renderCatalog(); });
+    $('#searchInput').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); $('#catalog').scrollIntoView({ behavior: 'smooth' }); }
+    });
+
+    $('#sortSelect').addEventListener('change', (e) => { state.sort = e.target.value; renderCatalog(); });
+
+    $('#clearFilters').addEventListener('click', () => {
+      state.query = ''; state.category = 'all';
+      $('#searchInput').value = '';
+      renderCatalog();
+    });
+
+    $('#modalMinus').addEventListener('click', () => {
+      modalState.qty = Math.max(1, modalState.qty - 1); $('#modalQty').textContent = modalState.qty;
+    });
+    $('#modalPlus').addEventListener('click', () => {
+      modalState.qty = Math.min(10, modalState.qty + 1); $('#modalQty').textContent = modalState.qty;
+    });
+    $('#modalAdd').addEventListener('click', () => {
+      addToCart(modalState.id, modalState.color, modalState.qty);
+      closeModal();
+    });
+
+    $('#checkoutBtn').addEventListener('click', () => {
+      if (!state.cart.length) return;
+      showToast('Prototype checkout: no payment is taken in this demo');
+    });
+
+    $('#newsletter').addEventListener('submit', (e) => {
+      e.preventDefault();
+      $('#newsEmail').value = '';
+      showToast("You're on the list. Thank you!");
+    });
+
+    /* ---------- Init ---------- */
+    function updateCategoryCounts() {
+      $$('[data-count]').forEach((el) => {
+        const n = PRODUCTS.filter((p) => p.category === el.dataset.count).length;
+        el.textContent = `${n} ${n === 1 ? 'piece' : 'pieces'}`;
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    updateCategoryCounts();
+    renderCatalog();
+    renderCart();
+    refreshIcons();
+  </script>
+</body>
+</html>
