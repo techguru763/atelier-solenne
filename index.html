@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier Solenne — Leather Bags, Pillow Covers & Laptop Sleeves</title>
-  <meta name="description" content="Atelier Solenne: full-grain leather bags, hand-loomed pillow covers and leather laptop sleeves, made in small batches." />
+  <title>ENA — Eastern Narratives | Wholesale Handcrafted Leather &amp; Embroidery</title>
+  <meta name="description" content="ENA (Eastern Narratives): hand-embroidered cushion covers and handcrafted leather accessories for wholesale, corporate gifting and private label. Made by women artisans of the LEAPS Women Economic Empowerment Program." />
 
-  <!-- Google Fonts -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237B1E3A'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23fff' letter-spacing='-2'%3EENA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS (Play CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,684 +22,702 @@
           },
           colors: {
             ink: '#1C1917',
-            alabaster: '#F6F3EE',
-            champagne: '#E6D2B0',
-            mist: '#8A9BB0',
-            terracotta: '#C47A5A',
+            maroon: { DEFAULT: '#7B1E3A', deep: '#5E1229', soft: '#F3E3E6' },
+            teal: { DEFAULT: '#0F4C4A', soft: '#DDEBE8' },
+            gold: { DEFAULT: '#B8862F', soft: '#F4E7CC' },
+            sand: '#F6F0E7',
           },
-          boxShadow: {
-            glass: '0 8px 32px rgba(28,25,23,0.08), inset 0 1px 0 rgba(255,255,255,0.6)',
-            lift: '0 24px 60px -20px rgba(28,25,23,0.28)',
-          },
+          boxShadow: { lift: '0 24px 60px -20px rgba(28,25,23,0.28)' },
         },
       },
     };
   </script>
-
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <style>
-    :root { --ink: #1C1917; }
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: #F6F3EE;
-      color: var(--ink);
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { background: #F6F0E7; color: #1C1917; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 
-    /* ---------- Ambient mesh background ---------- */
-    .ambient {
-      position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    /* Ambient mesh in the brand's own colours: maroon, saffron-gold, teal */
+    .ambient { position: fixed; inset: 0; z-index: -2; pointer-events: none;
       background:
-        radial-gradient(at 10% 15%, rgba(230, 200, 150, 0.55) 0px, transparent 45%),
-        radial-gradient(at 90% 10%, rgba(132, 156, 190, 0.40) 0px, transparent 42%),
-        radial-gradient(at 82% 78%, rgba(204, 128, 96, 0.32) 0px, transparent 45%),
-        radial-gradient(at 15% 90%, rgba(140, 162, 192, 0.30) 0px, transparent 42%),
-        radial-gradient(at 50% 50%, rgba(240, 222, 192, 0.45) 0px, transparent 60%),
-        #F6F3EE;
-    }
-    .blob {
-      position: fixed; z-index: -1; pointer-events: none;
-      border-radius: 9999px; filter: blur(90px); opacity: 0.55;
-      animation: drift 26s ease-in-out infinite alternate;
-    }
-    .blob-a { width: 34rem; height: 34rem; top: -8rem; left: -10rem; background: #E8CFA4; }
-    .blob-b { width: 28rem; height: 28rem; top: 30%; right: -10rem; background: #9FB0C8; animation-delay: -8s; }
-    .blob-c { width: 30rem; height: 30rem; bottom: -10rem; left: 30%; background: #D9977A; opacity: 0.38; animation-delay: -16s; }
-    @keyframes drift {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(40px, -30px) scale(1.08); }
-      100% { transform: translate(-30px, 40px) scale(0.96); }
-    }
+        radial-gradient(at 8% 12%, rgba(214, 170, 96, 0.45) 0, transparent 42%),
+        radial-gradient(at 92% 8%, rgba(123, 30, 58, 0.22) 0, transparent 40%),
+        radial-gradient(at 85% 80%, rgba(15, 76, 74, 0.20) 0, transparent 45%),
+        radial-gradient(at 12% 88%, rgba(123, 30, 58, 0.14) 0, transparent 40%),
+        radial-gradient(at 50% 45%, rgba(246, 226, 190, 0.55) 0, transparent 60%),
+        #F6F0E7; }
+    .blob { position: fixed; z-index: -1; pointer-events: none; border-radius: 9999px; filter: blur(90px); opacity: .5; animation: drift 28s ease-in-out infinite alternate; }
+    .blob-a { width: 34rem; height: 34rem; top: -10rem; left: -10rem; background: #E9C98E; }
+    .blob-b { width: 26rem; height: 26rem; top: 35%; right: -9rem; background: #C98A99; opacity: .32; animation-delay: -9s; }
+    .blob-c { width: 30rem; height: 30rem; bottom: -12rem; left: 35%; background: #7FAFA8; opacity: .30; animation-delay: -18s; }
+    @keyframes drift { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px,-30px) scale(1.08); } 100% { transform: translate(-30px,40px) scale(.96); } }
 
-    /* ---------- Glass surfaces ---------- */
-    .glass {
-      background: rgba(255, 255, 255, 0.48);
-      -webkit-backdrop-filter: blur(18px) saturate(140%);
-      backdrop-filter: blur(18px) saturate(140%);
-      border: 1px solid rgba(255, 255, 255, 0.65);
-      box-shadow: 0 8px 32px rgba(28, 25, 23, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-    }
-    .glass-strong {
-      background: rgba(255, 255, 255, 0.62);
-      -webkit-backdrop-filter: blur(24px) saturate(150%);
-      backdrop-filter: blur(24px) saturate(150%);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow: 0 24px 64px rgba(28, 25, 23, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    }
-    .glass-soft {
-      background: rgba(255, 255, 255, 0.34);
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.55);
-    }
+    /* Glass surfaces */
+    .glass { background: rgba(255,255,255,.48); -webkit-backdrop-filter: blur(18px) saturate(140%); backdrop-filter: blur(18px) saturate(140%); border: 1px solid rgba(255,255,255,.65); box-shadow: 0 8px 32px rgba(28,25,23,.08), inset 0 1px 0 rgba(255,255,255,.6); }
+    .glass-strong { background: rgba(255,255,255,.66); -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%); border: 1px solid rgba(255,255,255,.72); box-shadow: 0 24px 64px rgba(28,25,23,.16), inset 0 1px 0 rgba(255,255,255,.7); }
+    .glass-soft { background: rgba(255,255,255,.34); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.55); }
 
-    /* ---------- Details ---------- */
-    .eyebrow { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { scrollbar-width: none; }
-    .thin-scroll::-webkit-scrollbar { width: 6px; }
-    .thin-scroll::-webkit-scrollbar-thumb { background: rgba(28, 25, 23, 0.18); border-radius: 9999px; }
-
-    .img-zoom { transition: transform 900ms cubic-bezier(.2, .7, .2, 1); }
-    .group:hover .img-zoom { transform: scale(1.06); }
-
-    .card-enter { animation: cardIn 520ms cubic-bezier(.2, .7, .2, 1) both; }
+    .eyebrow { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; }
+    .logo-mark { font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: -.07em; color: #7B1E3A; line-height: .8; }
+    .logo-sub { font-size: .58rem; letter-spacing: .16em; color: #7B1E3A; text-transform: lowercase; }
+    .no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { scrollbar-width: none; }
+    .thin-scroll::-webkit-scrollbar { width: 6px; } .thin-scroll::-webkit-scrollbar-thumb { background: rgba(28,25,23,.18); border-radius: 9999px; }
+    .img-zoom { transition: transform 900ms cubic-bezier(.2,.7,.2,1); } .group:hover .img-zoom { transform: scale(1.05); }
+    .card-enter { animation: cardIn 520ms cubic-bezier(.2,.7,.2,1) both; }
     @keyframes cardIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-
-    .bump { animation: bump 420ms ease; }
-    @keyframes bump { 0%{transform:scale(1)} 35%{transform:scale(1.35)} 100%{transform:scale(1)} }
-
-    /* Modal & drawer transitions */
-    #modal, #cartOverlay { transition: opacity 280ms ease; }
-    #modalPanel { transition: transform 320ms cubic-bezier(.2, .7, .2, 1), opacity 280ms ease; }
-    #cartDrawer { transition: transform 420ms cubic-bezier(.2, .7, .2, 1); }
-    #toast { transition: transform 320ms cubic-bezier(.2, .7, .2, 1), opacity 260ms ease; }
-
-    select.glass-select {
-      appearance: none; -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231C1917' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 0.9rem center;
-    }
-
-    :focus-visible { outline: 2px solid #1C1917; outline-offset: 3px; border-radius: 9999px; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-    }
+    #modal { transition: opacity 280ms ease; } #modalPanel { transition: transform 320ms cubic-bezier(.2,.7,.2,1), opacity 280ms ease; }
+    #toast { transition: transform 320ms cubic-bezier(.2,.7,.2,1), opacity 260ms ease; }
+    #mobileMenu { transition: opacity 220ms ease, transform 220ms ease; }
+    select.glass-select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231C1917' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; }
+    .field { width: 100%; border-radius: 1rem; background: rgba(255,255,255,.62); border: 1px solid rgba(255,255,255,.85); padding: .8rem 1rem; font-size: 16px; transition: box-shadow .2s, background .2s; }
+    .field:focus { outline: none; background: rgba(255,255,255,.88); box-shadow: 0 0 0 3px rgba(123,30,58,.18); }
+    :focus-visible { outline: 2px solid #7B1E3A; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
   </style>
 </head>
 
-<body class="min-h-screen antialiased selection:bg-champagne/60">
-  <!-- Ambient background layers -->
+<body class="min-h-screen">
   <div class="ambient" aria-hidden="true"></div>
   <div class="blob blob-a" aria-hidden="true"></div>
   <div class="blob blob-b" aria-hidden="true"></div>
   <div class="blob blob-c" aria-hidden="true"></div>
 
-  <!-- =========================================================
-       1. FLOATING GLASS NAVBAR
-  ========================================================== -->
+  <!-- ================= NAVBAR ================= -->
   <header class="fixed top-4 inset-x-0 z-40 px-3 sm:px-4">
     <nav class="glass max-w-7xl mx-auto rounded-full flex items-center justify-between gap-3 pl-5 pr-2 py-2" aria-label="Main">
-      <a href="#top" class="flex items-baseline gap-2 shrink-0" aria-label="Atelier Solenne home">
-        <span class="font-serif text-[1.7rem] leading-none font-semibold tracking-tight">Solenne</span>
-        <span class="hidden sm:inline eyebrow text-[0.58rem] text-stone-500">Atelier</span>
+      <a href="#top" class="flex flex-col items-start shrink-0" aria-label="ENA Eastern Narratives home">
+        <span class="logo-mark text-[2rem]">ENA</span>
+        <span class="logo-sub -mt-0.5">eastern narratives</span>
       </a>
-
-      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium" id="navLinks">
-        <li><button data-nav-filter="all" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">All</button></li>
-        <li><button data-nav-filter="bags" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">Bags</button></li>
-        <li><button data-nav-filter="pillows" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">Pillow Covers</button></li>
-        <li><button data-nav-filter="sleeves" class="nav-link px-4 py-2 rounded-full transition hover:bg-white/60">Laptop Sleeves</button></li>
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium">
+        <li><a href="#story" class="px-4 py-2 rounded-full transition hover:bg-white/60">Our Story</a></li>
+        <li><a href="#collections" class="px-4 py-2 rounded-full transition hover:bg-white/60">Collections</a></li>
+        <li><a href="#catalog" class="px-4 py-2 rounded-full transition hover:bg-white/60">Catalogue</a></li>
+        <li><a href="#wholesale" class="px-4 py-2 rounded-full transition hover:bg-white/60">Wholesale &amp; Custom</a></li>
       </ul>
-
-      <div class="flex items-center gap-2 min-w-0">
-        <label class="relative flex items-center min-w-0" for="searchInput">
-          <span class="sr-only">Search products</span>
-          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 text-stone-500 pointer-events-none"></i>
-          <input id="searchInput" type="search" autocomplete="off" placeholder="Search the atelier…"
-            class="w-32 sm:w-52 md:w-64 rounded-full bg-white/55 border border-white/70 pl-10 pr-4 py-2.5 text-sm placeholder:text-stone-500 focus:outline-none focus:ring-2 focus:ring-ink/20 focus:bg-white/80 transition" />
-        </label>
-        <button id="cartButton" class="relative flex items-center gap-2 rounded-full bg-ink text-white pl-4 pr-3 py-2.5 text-sm font-medium hover:bg-stone-800 transition shrink-0" aria-label="Open shopping bag">
-          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-          <span class="hidden sm:inline">Bag</span>
-          <span id="cartCount" class="min-w-[1.4rem] h-[1.4rem] px-1 grid place-items-center rounded-full bg-white text-ink text-xs font-semibold">0</span>
+      <div class="flex items-center gap-2">
+        <a href="#enquire" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-maroon text-white px-4 sm:px-5 py-2.5 text-sm font-medium hover:bg-maroon-deep transition">
+          <i data-lucide="file-text" class="w-4 h-4"></i><span class="sm:hidden">Quote</span><span class="hidden sm:inline">Request a Quote</span>
+        </a>
+        <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full bg-white/60 border border-white/80 grid place-items-center" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
     </nav>
+    <div id="mobileMenu" class="lg:hidden glass-strong max-w-7xl mx-auto mt-2 rounded-3xl p-2 hidden opacity-0 -translate-y-2">
+      <a href="#story" class="block px-5 py-3 rounded-2xl hover:bg-white/70 font-medium">Our Story</a>
+      <a href="#collections" class="block px-5 py-3 rounded-2xl hover:bg-white/70 font-medium">Collections</a>
+      <a href="#catalog" class="block px-5 py-3 rounded-2xl hover:bg-white/70 font-medium">Catalogue</a>
+      <a href="#wholesale" class="block px-5 py-3 rounded-2xl hover:bg-white/70 font-medium">Wholesale &amp; Custom</a>
+    </div>
   </header>
 
-  <main id="top" class="pt-24 sm:pt-28">
+  <main id="top" class="pt-28">
 
-    <!-- =========================================================
-         2. HERO
-    ========================================================== -->
+    <!-- ================= HERO ================= -->
     <section class="max-w-7xl mx-auto px-3 sm:px-4" aria-labelledby="heroTitle">
-      <div class="relative rounded-[2.5rem] overflow-hidden h-[640px] md:h-[660px] shadow-lift">
-        <img src="images/1617326021886-53d6be1d7154.jpg"
-             alt="A sunlit living room with a soft white sofa beside a round table"
-             class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Lifestyle')" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#2a211a]/45 via-[#2a211a]/10 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#2a211a]/35 via-transparent to-transparent md:hidden"></div>
-
-        <!-- Floating info chip -->
-        <div class="hidden md:flex absolute top-8 right-8 glass rounded-2xl px-5 py-4 items-center gap-4">
-          <div class="w-10 h-10 rounded-full bg-white/70 grid place-items-center"><i data-lucide="scissors" class="w-4 h-4"></i></div>
-          <div>
-            <p class="text-sm font-semibold">Hand-finished in small batches</p>
-            <p class="text-xs text-stone-600">Each piece numbered and signed</p>
+      <div class="grid lg:grid-cols-[1.05fr_1fr] gap-5 items-stretch">
+        <div class="glass rounded-[2.5rem] p-7 sm:p-10 lg:p-12 flex flex-col justify-center">
+          <span class="inline-flex self-start items-center gap-2 rounded-full bg-white/65 border border-white/80 px-3.5 py-1.5 eyebrow text-[0.62rem] text-maroon">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i> Wholesale · Corporate Gifting · Private Label
+          </span>
+          <h1 id="heroTitle" class="font-serif text-[2.9rem] sm:text-6xl xl:text-[4.4rem] leading-[0.95] font-semibold mt-6 tracking-tight">
+            <span class="text-maroon">From Her Hands</span><br /><span class="text-teal">to the World</span>
+          </h1>
+          <div class="w-16 h-[3px] bg-gold rounded-full mt-6"></div>
+          <p class="mt-6 text-[1rem] leading-relaxed text-stone-700 max-w-lg">
+            Hand-embroidered cushion covers and handcrafted leather accessories, made by women artisans
+            trained through the <strong class="font-semibold text-ink">LEAPS Women Economic Empowerment Program</strong>.
+            Available in volume for retailers, corporate gifting and private label.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#catalog" class="group inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3.5 text-sm font-medium hover:bg-stone-800 transition">
+              View the Catalogue <i data-lucide="arrow-right" class="w-4 h-4 transition group-hover:translate-x-1"></i>
+            </a>
+            <a href="#enquire" class="inline-flex items-center gap-2 rounded-full bg-white/60 border border-white/85 px-6 py-3.5 text-sm font-medium hover:bg-white/85 transition">
+              <i data-lucide="handshake" class="w-4 h-4 text-maroon"></i> Request Wholesale Pricing
+            </a>
           </div>
         </div>
 
-        <div class="absolute inset-0 flex items-end md:items-center p-4 sm:p-8 md:p-14">
-          <div class="glass rounded-[2rem] p-7 sm:p-10 max-w-xl">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/60 border border-white/80 px-3.5 py-1.5 eyebrow text-[0.62rem]">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-terracotta"></i>
-              Autumn · Winter 2026 Collection
-            </span>
-            <h1 id="heroTitle" class="font-serif text-[2.7rem] sm:text-6xl leading-[0.98] font-medium mt-5 tracking-tight">
-              Quiet luxury,<br /><em class="font-normal">crafted to be lived with.</em>
-            </h1>
-            <p class="mt-5 text-[0.95rem] leading-relaxed text-stone-700 max-w-md">
-              Full-grain leather bags, hand-loomed pillow covers and laptop sleeves in a palette of
-              cognac, linen and stone. Made slowly, to soften and patina with you.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#catalog" class="group inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3.5 text-sm font-medium hover:bg-stone-800 transition">
-                Explore Catalog
-                <i data-lucide="arrow-right" class="w-4 h-4 transition group-hover:translate-x-1"></i>
-              </a>
-              <a href="#categories" class="inline-flex items-center gap-2 rounded-full bg-white/55 border border-white/80 px-6 py-3.5 text-sm font-medium hover:bg-white/80 transition">
-                <i data-lucide="layout-grid" class="w-4 h-4"></i>
-                Browse Categories
-              </a>
+        <!-- Image composition -->
+        <div class="grid grid-cols-2 grid-rows-[1.35fr_1fr] gap-4 min-h-[460px] lg:min-h-[600px]">
+          <div class="col-span-2 relative rounded-[2rem] overflow-hidden shadow-lift">
+            <img src="images/story-collection.jpg" alt="ENA embroidered cushions, leather folios and an embroidered table runner arranged on a wooden table" class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'ENA')" />
+            <div class="absolute left-4 bottom-4 glass rounded-2xl px-4 py-3 flex items-center gap-3">
+              <span class="w-9 h-9 rounded-full bg-maroon text-white grid place-items-center"><i data-lucide="scissors" class="w-4 h-4"></i></span>
+              <p class="text-sm font-semibold leading-tight">Textile &amp; leather,<br /><span class="font-normal text-stone-600 text-xs">made by hand</span></p>
             </div>
+          </div>
+          <div class="relative rounded-[1.75rem] overflow-hidden">
+            <img src="images/noor-green-maroon.jpg" alt="Green and maroon leather card holder debossed with the ENA logo" class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Leather')" />
+          </div>
+          <div class="relative rounded-[1.75rem] overflow-hidden bg-white">
+            <img src="images/cushion-suzani-medallion.jpg" alt="Cream cushion cover with a hand-embroidered suzani medallion" class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Embroidery')" />
           </div>
         </div>
       </div>
 
-      <!-- Trust strip -->
-      <div class="glass rounded-3xl mt-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/60 text-sm">
-        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="truck" class="w-4 h-4 shrink-0"></i><span>Free shipping over $250</span></div>
-        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="shield-check" class="w-4 h-4 shrink-0"></i><span>Lifetime stitching warranty</span></div>
-        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="rotate-ccw" class="w-4 h-4 shrink-0"></i><span>30-day easy returns</span></div>
-        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="leaf" class="w-4 h-4 shrink-0"></i><span>Vegetable-tanned leathers</span></div>
+      <div class="glass rounded-3xl mt-5 grid grid-cols-2 md:grid-cols-4 text-sm">
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="heart-handshake" class="w-4 h-4 shrink-0 text-maroon"></i><span>Made by women artisans</span></div>
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="stamp" class="w-4 h-4 shrink-0 text-maroon"></i><span>Custom logo debossing</span></div>
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="palette" class="w-4 h-4 shrink-0 text-maroon"></i><span>Colours &amp; motifs to your brief</span></div>
+        <div class="flex items-center gap-3 px-5 py-4"><i data-lucide="package-check" class="w-4 h-4 shrink-0 text-maroon"></i><span>Samples before bulk orders</span></div>
       </div>
     </section>
 
-    <!-- =========================================================
-         3. BENTO CATEGORY GRID
-    ========================================================== -->
-    <section id="categories" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24 scroll-mt-24" aria-labelledby="catTitle">
+    <!-- ================= STORY ================= -->
+    <section id="story" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24" aria-labelledby="storyTitle">
+      <div class="glass rounded-[2.5rem] p-3 sm:p-4 grid lg:grid-cols-2 gap-4">
+        <div class="relative rounded-[2rem] overflow-hidden min-h-[380px] lg:min-h-[600px]">
+          <img src="images/story-artisan.jpg" alt="An artisan in a maroon embroidered shawl stitching a colourful flower on an embroidery hoop" class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Our Story')" />
+          <div class="absolute left-4 right-4 bottom-4 sm:right-auto glass rounded-2xl px-5 py-4 max-w-sm">
+            <p class="eyebrow text-[0.6rem] text-maroon">The program behind ENA</p>
+            <p class="font-serif text-xl font-semibold mt-1 leading-tight">LEAPS Women Economic Empowerment Program</p>
+          </div>
+        </div>
+        <div class="p-5 sm:p-8 lg:p-10 flex flex-col">
+          <p class="eyebrow text-stone-500">Our Story</p>
+          <h2 id="storyTitle" class="font-serif text-4xl sm:text-5xl font-semibold mt-3 tracking-tight leading-[1.02]">
+            Every stitch opens <em class="font-medium text-maroon">a new beginning.</em>
+          </h2>
+          <p class="mt-5 text-stone-700 leading-relaxed">
+            The LEAPS Women Economic Empowerment Program, through ENA (Eastern Narratives), trains women from
+            underserved communities in textile and leather product making. The work creates pathways to
+            financial independence and a better future.
+          </p>
+          <blockquote class="mt-6 border-l-[3px] border-gold pl-5 font-serif text-2xl sm:text-[1.7rem] leading-snug text-maroon font-semibold">
+            Every crafted product narrates a story of heritage, resilience and new beginnings.
+          </blockquote>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-3">
+            <div class="glass-soft rounded-2xl p-5">
+              <span class="w-10 h-10 rounded-full bg-maroon-soft grid place-items-center"><i data-lucide="graduation-cap" class="w-4 h-4 text-maroon"></i></span>
+              <h3 class="font-serif text-xl font-semibold mt-3">Skills</h3>
+              <p class="text-sm text-stone-600 mt-1 leading-relaxed">Training in hand embroidery and leather product making.</p>
+            </div>
+            <div class="glass-soft rounded-2xl p-5">
+              <span class="w-10 h-10 rounded-full bg-teal-soft grid place-items-center"><i data-lucide="wallet" class="w-4 h-4 text-teal"></i></span>
+              <h3 class="font-serif text-xl font-semibold mt-3">Income</h3>
+              <p class="text-sm text-stone-600 mt-1 leading-relaxed">Every order is paid work, and a step towards financial independence.</p>
+            </div>
+            <div class="glass-soft rounded-2xl p-5">
+              <span class="w-10 h-10 rounded-full bg-gold-soft grid place-items-center"><i data-lucide="flower-2" class="w-4 h-4 text-gold"></i></span>
+              <h3 class="font-serif text-xl font-semibold mt-3">Heritage</h3>
+              <p class="text-sm text-stone-600 mt-1 leading-relaxed">Traditional motifs, carried into products for today's buyers.</p>
+            </div>
+          </div>
+          <p class="mt-auto pt-8 text-sm text-stone-600">When you buy from ENA in volume, you're commissioning work from the women of the program.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COLLECTIONS ================= -->
+    <section id="collections" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24" aria-labelledby="colTitle">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
         <div>
-          <p class="eyebrow text-stone-500">The Collections</p>
-          <h2 id="catTitle" class="font-serif text-4xl sm:text-5xl font-medium mt-3 tracking-tight">Three crafts, <em class="font-normal">one sensibility.</em></h2>
+          <p class="eyebrow text-stone-500">Collections</p>
+          <h2 id="colTitle" class="font-serif text-4xl sm:text-5xl font-semibold mt-3 tracking-tight">Two crafts, <em class="font-medium text-teal">three collections.</em></h2>
         </div>
-        <p class="text-stone-600 max-w-sm text-[0.95rem] leading-relaxed">Pick a collection to filter the catalog below.</p>
+        <p class="text-stone-600 max-w-sm leading-relaxed">Choose a collection to filter the catalogue.</p>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-5 md:h-[640px]">
-        <!-- Bags (large) -->
-        <button data-category="bags" class="bento group relative overflow-hidden rounded-[2rem] h-[420px] md:h-auto md:col-span-2 md:row-span-2 text-left shadow-glass">
-          <img src="images/1691480150204-66dd1eb77391.jpg"
-               alt="Brown leather handbag on a pale background" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Leather Bags')" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-5 md:h-[620px]">
+        <button data-category="leather" class="group relative overflow-hidden rounded-[2rem] h-[400px] md:h-auto md:col-span-2 md:row-span-2 text-left">
+          <img src="images/noor-bottle-green.jpg" alt="Bottle green leather card holder on warm stone" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Leather Accessories')" />
           <div class="absolute left-4 right-4 bottom-4 sm:left-6 sm:right-6 sm:bottom-6 glass rounded-2xl px-6 py-5 flex items-center justify-between gap-4">
             <div>
-              <p class="eyebrow text-[0.62rem] text-stone-600" data-count="bags">— pieces</p>
-              <h3 class="font-serif text-3xl sm:text-4xl font-medium mt-1">Ladies Leather Bags</h3>
-              <p class="text-sm text-stone-700 mt-1">Structured totes, crossbody, bucket bags &amp; clutches</p>
+              <p class="eyebrow text-[0.62rem] text-stone-600" data-count="leather">— designs</p>
+              <h3 class="font-serif text-3xl sm:text-4xl font-semibold mt-1">Leather Accessories</h3>
+              <p class="text-sm text-stone-700 mt-1">Card holders, card sleeves &amp; travel wallets</p>
             </div>
-            <span class="w-12 h-12 shrink-0 rounded-full bg-ink text-white grid place-items-center transition group-hover:rotate-[-45deg]"><i data-lucide="arrow-right" class="w-5 h-5"></i></span>
+            <span class="w-12 h-12 shrink-0 rounded-full bg-maroon text-white grid place-items-center transition group-hover:-rotate-45"><i data-lucide="arrow-right" class="w-5 h-5"></i></span>
           </div>
         </button>
-
-        <!-- Pillows -->
-        <button data-category="pillows" class="bento group relative overflow-hidden rounded-[2rem] h-[320px] md:h-auto text-left shadow-glass">
-          <img src="images/1632928312386-90d200fd4b7b.jpg"
-               alt="An armchair dressed with soft peach and tan cushions" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Pillow Covers')" />
+        <button data-category="embroidered" class="group relative overflow-hidden rounded-[2rem] h-[320px] md:h-auto text-left">
+          <img src="images/bagh-sleeve-styled.jpg" alt="Taupe leather laptop sleeve with an embroidered floral panel" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Embroidered Leather')" />
           <div class="absolute left-4 right-4 bottom-4 glass rounded-2xl px-5 py-4 flex items-center justify-between gap-3">
             <div>
-              <p class="eyebrow text-[0.6rem] text-stone-600" data-count="pillows">— pieces</p>
-              <h3 class="font-serif text-2xl font-medium mt-0.5">Fabric Pillow Covers</h3>
+              <p class="eyebrow text-[0.6rem] text-stone-600" data-count="embroidered">— designs</p>
+              <h3 class="font-serif text-2xl font-semibold mt-0.5">Embroidered Leather</h3>
             </div>
-            <span class="w-10 h-10 shrink-0 rounded-full bg-white/80 grid place-items-center transition group-hover:bg-ink group-hover:text-white"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+            <span class="w-10 h-10 shrink-0 rounded-full bg-white/85 grid place-items-center transition group-hover:bg-maroon group-hover:text-white"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
           </div>
         </button>
-
-        <!-- Sleeves -->
-        <button data-category="sleeves" class="bento group relative overflow-hidden rounded-[2rem] h-[320px] md:h-auto text-left shadow-glass">
-          <img src="images/1768511562691-571cbede6cc7.jpg"
-               alt="A dark brown leather folio with a wrap strap" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Laptop Sleeves')" />
+        <button data-category="cushions" class="group relative overflow-hidden rounded-[2rem] h-[320px] md:h-auto text-left bg-white">
+          <img src="images/cushion-jharoka.jpg" alt="Linen cushion cover embroidered with arches and lanterns" class="img-zoom absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Cushion Covers')" />
           <div class="absolute left-4 right-4 bottom-4 glass rounded-2xl px-5 py-4 flex items-center justify-between gap-3">
             <div>
-              <p class="eyebrow text-[0.6rem] text-stone-600" data-count="sleeves">— pieces</p>
-              <h3 class="font-serif text-2xl font-medium mt-0.5">Leather Laptop Sleeves</h3>
+              <p class="eyebrow text-[0.6rem] text-stone-600" data-count="cushions">— designs</p>
+              <h3 class="font-serif text-2xl font-semibold mt-0.5">Embroidered Cushion Covers</h3>
             </div>
-            <span class="w-10 h-10 shrink-0 rounded-full bg-white/80 grid place-items-center transition group-hover:bg-ink group-hover:text-white"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+            <span class="w-10 h-10 shrink-0 rounded-full bg-white/85 grid place-items-center transition group-hover:bg-maroon group-hover:text-white"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
           </div>
         </button>
       </div>
     </section>
 
-    <!-- =========================================================
-         4. INTERACTIVE CATALOG
-    ========================================================== -->
-    <section id="catalog" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24 scroll-mt-24" aria-labelledby="catalogTitle">
+    <!-- ================= CATALOGUE ================= -->
+    <section id="catalog" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24" aria-labelledby="catalogTitle">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
         <div>
-          <p class="eyebrow text-stone-500">Shop the Atelier</p>
-          <h2 id="catalogTitle" class="font-serif text-4xl sm:text-5xl font-medium mt-3 tracking-tight">The Catalog</h2>
+          <p class="eyebrow text-stone-500">Wholesale Catalogue</p>
+          <h2 id="catalogTitle" class="font-serif text-4xl sm:text-5xl font-semibold mt-3 tracking-tight">The Catalogue</h2>
+          <p class="text-sm text-stone-600 mt-2">Pricing depends on quantity and customisation, and is shared with each quote.</p>
         </div>
         <p id="resultCount" class="text-sm text-stone-600" aria-live="polite"></p>
       </div>
 
-      <!-- Filter bar -->
-      <div class="glass rounded-3xl md:rounded-full p-2 flex flex-col md:flex-row md:items-center md:justify-between gap-2 sticky top-[5.25rem] z-30">
-        <div class="flex gap-1 overflow-x-auto no-scrollbar" role="tablist" aria-label="Filter by category" id="tabs">
+      <div class="glass rounded-3xl lg:rounded-full p-2 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 sticky top-[5.6rem] z-30">
+        <div class="flex gap-1 overflow-x-auto no-scrollbar" role="tablist" aria-label="Filter by collection">
           <button role="tab" data-tab="all" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">All</button>
-          <button role="tab" data-tab="bags" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Bags</button>
-          <button role="tab" data-tab="pillows" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Pillow Covers</button>
-          <button role="tab" data-tab="sleeves" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Laptop Sleeves</button>
+          <button role="tab" data-tab="leather" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Leather Accessories</button>
+          <button role="tab" data-tab="embroidered" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Embroidered Leather</button>
+          <button role="tab" data-tab="cushions" class="tab whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition">Cushion Covers</button>
         </div>
-        <div class="flex items-center gap-2 px-1 md:px-0">
-          <span id="activeQuery" class="hidden items-center gap-1.5 rounded-full bg-white/70 border border-white/80 pl-3 pr-1.5 py-1.5 text-xs font-medium"></span>
-          <label for="sortSelect" class="text-xs text-stone-600 pl-2 hidden sm:block">Sort</label>
-          <select id="sortSelect" class="glass-select w-full md:w-auto rounded-full bg-white/60 border border-white/80 pl-4 pr-10 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ink/20 cursor-pointer">
+        <div class="flex items-center gap-2 px-1 lg:px-0">
+          <label class="relative flex-1 lg:flex-none" for="searchInput">
+            <span class="sr-only">Search the catalogue</span>
+            <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-500 pointer-events-none"></i>
+            <input id="searchInput" type="search" autocomplete="off" placeholder="Search" class="w-full lg:w-60 rounded-full bg-white/60 border border-white/80 pl-10 pr-4 py-2.5 text-[16px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-maroon/20" />
+          </label>
+          <label for="sortSelect" class="sr-only">Sort</label>
+          <select id="sortSelect" class="glass-select rounded-full bg-white/60 border border-white/80 pl-4 pr-10 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 cursor-pointer">
             <option value="featured">Featured</option>
-            <option value="low">Price: Low to High</option>
-            <option value="high">Price: High to Low</option>
+            <option value="az">Name A–Z</option>
+            <option value="colours">Most colourways</option>
           </select>
         </div>
       </div>
 
-      <!-- Product grid -->
       <div id="productGrid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6"></div>
 
-      <!-- Empty state -->
       <div id="emptyState" class="hidden mt-8 glass rounded-[2rem] py-20 px-6 text-center">
         <div class="w-14 h-14 mx-auto rounded-full bg-white/70 grid place-items-center"><i data-lucide="search-x" class="w-6 h-6"></i></div>
-        <h3 class="font-serif text-3xl mt-5">Nothing matches yet</h3>
+        <h3 class="font-serif text-3xl mt-5 font-semibold">No designs match</h3>
         <p id="emptyText" class="text-stone-600 mt-2 text-sm"></p>
-        <button id="clearFilters" class="mt-6 inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3 text-sm font-medium hover:bg-stone-800 transition">
-          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Clear filters
-        </button>
+        <button id="clearFilters" class="mt-6 inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3 text-sm font-medium hover:bg-stone-800 transition"><i data-lucide="rotate-ccw" class="w-4 h-4"></i> Clear filters</button>
       </div>
     </section>
 
-    <!-- =========================================================
-         6. CRAFTSMANSHIP
-    ========================================================== -->
-    <section id="craft" class="max-w-7xl mx-auto px-3 sm:px-4 pt-28 scroll-mt-24" aria-labelledby="craftTitle">
-      <div class="glass rounded-[2.5rem] p-3 sm:p-4 grid lg:grid-cols-2 gap-4">
-        <!-- Image side -->
-        <div class="relative rounded-[2rem] overflow-hidden min-h-[380px] lg:min-h-[620px]">
-          <img src="images/1473188588951-666fce8e7c68.jpg"
-               alt="Brown leather satchel resting on concrete beside a green plant" class="absolute inset-0 w-full h-full object-cover" onerror="fallbackImg(this,'Craftsmanship')" />
-          <div class="absolute left-4 bottom-4 right-4 sm:right-auto glass rounded-2xl px-5 py-4 flex items-center gap-4 max-w-sm">
-            <div class="w-11 h-11 shrink-0 rounded-full bg-white/75 grid place-items-center"><i data-lucide="award" class="w-5 h-5"></i></div>
+    <!-- ================= WHOLESALE & CUSTOM ================= -->
+    <section id="wholesale" class="max-w-7xl mx-auto px-3 sm:px-4 pt-28" aria-labelledby="wsTitle">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="eyebrow text-stone-500">Wholesale &amp; Custom Orders</p>
+        <h2 id="wsTitle" class="font-serif text-4xl sm:text-5xl font-semibold mt-3 tracking-tight">Made for your shelves, <em class="font-medium text-maroon">your brand and your gifts.</em></h2>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glass rounded-[1.75rem] p-6">
+          <span class="w-11 h-11 rounded-full bg-maroon text-white grid place-items-center"><i data-lucide="store" class="w-5 h-5"></i></span>
+          <h3 class="font-serif text-2xl font-semibold mt-4">Retail &amp; Wholesale</h3>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Stock the catalogue designs for boutiques, concept stores, hotels and online shops.</p>
+        </div>
+        <div class="glass rounded-[1.75rem] p-6">
+          <span class="w-11 h-11 rounded-full bg-teal text-white grid place-items-center"><i data-lucide="gift" class="w-5 h-5"></i></span>
+          <h3 class="font-serif text-2xl font-semibold mt-4">Corporate Gifting</h3>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Card holders, travel wallets and cushions for client gifts, events and employee kits.</p>
+        </div>
+        <div class="glass rounded-[1.75rem] p-6">
+          <span class="w-11 h-11 rounded-full bg-gold text-white grid place-items-center"><i data-lucide="stamp" class="w-5 h-5"></i></span>
+          <h3 class="font-serif text-2xl font-semibold mt-4">Private Label</h3>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Your logo debossed into the leather, the same way ENA's mark is pressed in today.</p>
+        </div>
+        <div class="glass rounded-[1.75rem] p-6">
+          <span class="w-11 h-11 rounded-full bg-ink text-white grid place-items-center"><i data-lucide="pen-tool" class="w-5 h-5"></i></span>
+          <h3 class="font-serif text-2xl font-semibold mt-4">Custom Design</h3>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Brand colours, bespoke embroidery motifs and sizes made to your specification.</p>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="glass rounded-[2.5rem] mt-5 p-6 sm:p-10">
+        <h3 class="font-serif text-3xl font-semibold">How a bulk order works</h3>
+        <ol class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <li class="relative">
+            <span class="font-serif text-5xl font-semibold text-maroon/25">1</span>
+            <p class="font-semibold mt-1">Send your enquiry</p>
+            <p class="text-sm text-stone-600 mt-1 leading-relaxed">Tell us the designs, quantities, timeline and any branding you need.</p>
+          </li>
+          <li>
+            <span class="font-serif text-5xl font-semibold text-maroon/25">2</span>
+            <p class="font-semibold mt-1">Quote &amp; samples</p>
+            <p class="text-sm text-stone-600 mt-1 leading-relaxed">We confirm pricing and lead times, then make samples for your approval.</p>
+          </li>
+          <li>
+            <span class="font-serif text-5xl font-semibold text-maroon/25">3</span>
+            <p class="font-semibold mt-1">Handmade production</p>
+            <p class="text-sm text-stone-600 mt-1 leading-relaxed">The artisans stitch, emboss and finish each piece, with checks at every stage.</p>
+          </li>
+          <li>
+            <span class="font-serif text-5xl font-semibold text-maroon/25">4</span>
+            <p class="font-semibold mt-1">Packed &amp; delivered</p>
+            <p class="text-sm text-stone-600 mt-1 leading-relaxed">Orders are packed to your requirements and shipped to your door.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= ENQUIRY FORM ================= -->
+    <section id="enquire" class="max-w-7xl mx-auto px-3 sm:px-4 pt-24" aria-labelledby="enqTitle">
+      <div class="glass-strong rounded-[2.5rem] grid lg:grid-cols-[0.85fr_1.15fr] overflow-hidden">
+        <div class="relative p-8 sm:p-10 lg:p-12 bg-maroon text-white overflow-hidden">
+          <div class="absolute -right-16 -bottom-16 w-72 h-72 rounded-full bg-white/10 blur-2xl" aria-hidden="true"></div>
+          <p class="eyebrow text-white/70">Request a quote</p>
+          <h2 id="enqTitle" class="font-serif text-4xl sm:text-5xl font-semibold mt-3 leading-[1.02]">Tell us what you'd like to order.</h2>
+          <p class="mt-5 text-white/80 leading-relaxed">Add designs from the catalogue with <strong class="text-white">Enquire</strong>, or describe what you need. We'll reply with pricing, minimum quantities and lead times.</p>
+          <ul class="mt-8 space-y-3 text-sm">
+            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 mt-0.5 shrink-0 text-gold-soft"></i>Wholesale price lists on request</li>
+            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 mt-0.5 shrink-0 text-gold-soft"></i>Logo debossing &amp; custom colours</li>
+            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 mt-0.5 shrink-0 text-gold-soft"></i>Samples before bulk production</li>
+          </ul>
+          <div id="contactLines" class="mt-10 space-y-2 text-sm text-white/85"></div>
+        </div>
+
+        <div class="p-6 sm:p-10 lg:p-12">
+          <form id="enquiryForm" novalidate class="grid sm:grid-cols-2 gap-4">
             <div>
-              <p class="text-sm font-semibold">Tanned the slow way</p>
-              <p class="text-xs text-stone-600">Hides cured in oak-bark and mimosa tannins for 40 days</p>
+              <label for="fName" class="text-sm font-medium">Your name <span class="text-maroon">*</span></label>
+              <input id="fName" name="name" required autocomplete="name" class="field mt-1.5" />
             </div>
-          </div>
-        </div>
+            <div>
+              <label for="fCompany" class="text-sm font-medium">Company <span class="text-maroon">*</span></label>
+              <input id="fCompany" name="company" required autocomplete="organization" class="field mt-1.5" />
+            </div>
+            <div>
+              <label for="fEmail" class="text-sm font-medium">Work email <span class="text-maroon">*</span></label>
+              <input id="fEmail" name="email" type="email" required autocomplete="email" class="field mt-1.5" />
+            </div>
+            <div>
+              <label for="fPhone" class="text-sm font-medium">Phone / WhatsApp</label>
+              <input id="fPhone" name="phone" type="tel" autocomplete="tel" class="field mt-1.5" />
+            </div>
+            <div>
+              <label for="fType" class="text-sm font-medium">Order type <span class="text-maroon">*</span></label>
+              <select id="fType" name="type" required class="field glass-select mt-1.5 pr-10">
+                <option value="">Choose one</option>
+                <option>Wholesale / retail stock</option>
+                <option>Corporate gifting</option>
+                <option>Private label (our logo)</option>
+                <option>Custom design</option>
+              </select>
+            </div>
+            <div>
+              <label for="fQty" class="text-sm font-medium">Estimated quantity</label>
+              <select id="fQty" name="qty" class="field glass-select mt-1.5 pr-10">
+                <option value="">Not sure yet</option>
+                <option>Under 100 pieces</option>
+                <option>100 – 500 pieces</option>
+                <option>500 – 1,000 pieces</option>
+                <option>Over 1,000 pieces</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <p class="text-sm font-medium">Designs of interest</p>
+              <div id="enquiryChips" class="mt-1.5 min-h-[3.25rem] rounded-2xl bg-white/50 border border-dashed border-stone-300 p-2 flex flex-wrap gap-2"></div>
+            </div>
+            <div>
+              <label for="fCountry" class="text-sm font-medium">Country</label>
+              <input id="fCountry" name="country" autocomplete="country-name" class="field mt-1.5" />
+            </div>
+            <div>
+              <label for="fDate" class="text-sm font-medium">Needed by</label>
+              <input id="fDate" name="date" type="month" class="field mt-1.5" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="fMsg" class="text-sm font-medium">Details</label>
+              <textarea id="fMsg" name="message" rows="4" placeholder="Colours, logo, sizes, packaging, delivery city…" class="field mt-1.5 resize-y"></textarea>
+            </div>
+            <p id="formError" class="sm:col-span-2 text-sm text-maroon hidden" role="alert"></p>
+            <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
+              <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-maroon text-white px-7 py-3.5 text-sm font-semibold hover:bg-maroon-deep transition">
+                <i data-lucide="send" class="w-4 h-4"></i> Prepare my enquiry
+              </button>
+              <p class="text-xs text-stone-500">No payment is taken. This only starts a conversation.</p>
+            </div>
+          </form>
 
-        <!-- Copy side -->
-        <div class="p-5 sm:p-8 lg:p-10 flex flex-col">
-          <p class="eyebrow text-stone-500">Craftsmanship</p>
-          <h2 id="craftTitle" class="font-serif text-4xl sm:text-5xl font-medium mt-3 tracking-tight leading-[1.02]">
-            Materials chosen <em class="font-normal">to outlast trends.</em>
-          </h2>
-          <p class="mt-5 text-stone-700 leading-relaxed text-[0.95rem]">
-            We work with two materials and know them well. Every bag and sleeve starts as a full hide,
-            and every pillow cover starts as linen woven on a hand loom.
-          </p>
-
-          <div class="mt-8 grid sm:grid-cols-2 gap-4">
-            <div class="glass-soft rounded-2xl p-5">
-              <div class="w-10 h-10 rounded-full bg-[#8B5A2B]/15 grid place-items-center"><i data-lucide="layers" class="w-4 h-4 text-[#6E3B23]"></i></div>
-              <h3 class="font-serif text-2xl mt-4">Full-grain cowhide</h3>
-              <p class="text-sm text-stone-600 mt-2 leading-relaxed">The top layer of the hide, kept whole with its natural grain. It is the strongest cut, and it darkens into a patina over the years.</p>
-            </div>
-            <div class="glass-soft rounded-2xl p-5">
-              <div class="w-10 h-10 rounded-full bg-mist/20 grid place-items-center"><i data-lucide="grip" class="w-4 h-4 text-[#4A5A70]"></i></div>
-              <h3 class="font-serif text-2xl mt-4">320 GSM hand-loomed linen</h3>
-              <p class="text-sm text-stone-600 mt-2 leading-relaxed">A heavy European flax linen, stonewashed until it feels soft and lived-in. It gets softer with every wash.</p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4 mt-auto pt-8">
-            <div class="glass rounded-2xl p-5">
-              <p class="font-serif text-4xl sm:text-5xl font-medium">1.6<span class="text-2xl">mm</span></p>
-              <p class="text-xs text-stone-600 mt-1 eyebrow">Hide thickness</p>
-            </div>
-            <div class="glass rounded-2xl p-5">
-              <p class="font-serif text-4xl sm:text-5xl font-medium">320</p>
-              <p class="text-xs text-stone-600 mt-1 eyebrow">GSM linen weight</p>
-            </div>
-            <div class="glass rounded-2xl p-5">
-              <p class="font-serif text-4xl sm:text-5xl font-medium">18<span class="text-2xl">h</span></p>
-              <p class="text-xs text-stone-600 mt-1 eyebrow">Hand-work per bag</p>
-            </div>
-            <div class="glass rounded-2xl p-5">
-              <p class="font-serif text-4xl sm:text-5xl font-medium">14</p>
-              <p class="text-xs text-stone-600 mt-1 eyebrow">Master artisans</p>
-            </div>
+          <!-- Result panel -->
+          <div id="enquiryDone" class="hidden">
+            <div class="w-12 h-12 rounded-full bg-teal text-white grid place-items-center"><i data-lucide="check" class="w-6 h-6"></i></div>
+            <h3 class="font-serif text-3xl font-semibold mt-4">Your enquiry is ready</h3>
+            <p id="doneText" class="text-sm text-stone-600 mt-2 leading-relaxed"></p>
+            <pre id="enquirySummary" class="mt-5 max-h-72 overflow-auto thin-scroll whitespace-pre-wrap rounded-2xl bg-white/70 border border-white p-4 text-[13px] leading-relaxed font-sans"></pre>
+            <div id="sendActions" class="mt-5 flex flex-wrap gap-3"></div>
+            <button id="editEnquiry" class="mt-5 text-sm font-medium underline underline-offset-4">Edit enquiry</button>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- =========================================================
-       8. FOOTER
-  ========================================================== -->
-  <footer class="max-w-7xl mx-auto px-3 sm:px-4 pt-28 pb-8">
+  <!-- ================= FOOTER ================= -->
+  <footer class="max-w-7xl mx-auto px-3 sm:px-4 pt-24 pb-8">
     <div class="glass rounded-[2.5rem] p-8 sm:p-12">
       <div class="grid gap-10 md:grid-cols-12">
         <div class="md:col-span-5">
-          <p class="font-serif text-4xl font-semibold">Solenne</p>
-          <p class="mt-4 text-sm text-stone-600 leading-relaxed max-w-sm">
-            A small atelier making full-grain leather goods and hand-loomed textiles for everyday use.
-            Fewer pieces, made carefully, built to last.
+          <span class="logo-mark text-5xl block">ENA</span>
+          <span class="logo-sub block mt-1 text-[0.7rem]">eastern narratives</span>
+          <p class="mt-5 text-sm text-stone-600 leading-relaxed max-w-sm">
+            Hand-embroidered textiles and handcrafted leather accessories, made by women trained through the
+            LEAPS Women Economic Empowerment Program.
           </p>
-          <div class="flex gap-2 mt-6">
-            <a href="#top" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/60 border border-white/80 grid place-items-center hover:bg-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-            <a href="#top" aria-label="Pinterest" class="w-10 h-10 rounded-full bg-white/60 border border-white/80 grid place-items-center hover:bg-white transition"><i data-lucide="pin" class="w-4 h-4"></i></a>
-            <a href="#top" aria-label="Email" class="w-10 h-10 rounded-full bg-white/60 border border-white/80 grid place-items-center hover:bg-white transition"><i data-lucide="mail" class="w-4 h-4"></i></a>
-          </div>
         </div>
         <div class="md:col-span-2">
-          <p class="eyebrow text-stone-500">Shop</p>
+          <p class="eyebrow text-stone-500">Collections</p>
           <ul class="mt-4 space-y-2.5 text-sm">
-            <li><button data-footer-filter="bags" class="hover:underline underline-offset-4">Leather Bags</button></li>
-            <li><button data-footer-filter="pillows" class="hover:underline underline-offset-4">Pillow Covers</button></li>
-            <li><button data-footer-filter="sleeves" class="hover:underline underline-offset-4">Laptop Sleeves</button></li>
-            <li><button data-footer-filter="all" class="hover:underline underline-offset-4">All Products</button></li>
+            <li><button data-footer-filter="leather" class="hover:underline underline-offset-4 text-left">Leather Accessories</button></li>
+            <li><button data-footer-filter="embroidered" class="hover:underline underline-offset-4 text-left">Embroidered Leather</button></li>
+            <li><button data-footer-filter="cushions" class="hover:underline underline-offset-4 text-left">Cushion Covers</button></li>
           </ul>
         </div>
         <div class="md:col-span-2">
-          <p class="eyebrow text-stone-500">Atelier</p>
+          <p class="eyebrow text-stone-500">Company</p>
           <ul class="mt-4 space-y-2.5 text-sm">
-            <li><a href="#craft" class="hover:underline underline-offset-4">Craftsmanship</a></li>
-            <li><a href="#categories" class="hover:underline underline-offset-4">Collections</a></li>
-            <li><a href="#top" class="hover:underline underline-offset-4">Care Guide</a></li>
-            <li><a href="#top" class="hover:underline underline-offset-4">Shipping &amp; Returns</a></li>
+            <li><a href="#story" class="hover:underline underline-offset-4">Our Story</a></li>
+            <li><a href="#wholesale" class="hover:underline underline-offset-4">Wholesale &amp; Custom</a></li>
+            <li><a href="#enquire" class="hover:underline underline-offset-4">Request a Quote</a></li>
           </ul>
         </div>
         <div class="md:col-span-3">
-          <p class="eyebrow text-stone-500">Letters from the studio</p>
-          <form id="newsletter" class="mt-4 flex gap-2">
-            <label for="newsEmail" class="sr-only">Email address</label>
-            <input id="newsEmail" type="email" required placeholder="Email address" class="min-w-0 flex-1 rounded-full bg-white/60 border border-white/80 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink/20" />
-            <button class="rounded-full bg-ink text-white w-11 h-11 shrink-0 grid place-items-center hover:bg-stone-800 transition" aria-label="Subscribe"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
-          </form>
-          <p class="text-xs text-stone-500 mt-3">New releases and restocks, about once a month.</p>
+          <p class="eyebrow text-stone-500">Trade enquiries</p>
+          <div id="footerContact" class="mt-4 space-y-2 text-sm"></div>
+          <a href="#enquire" class="mt-4 inline-flex items-center gap-2 rounded-full bg-maroon text-white px-5 py-2.5 text-sm font-medium hover:bg-maroon-deep transition">Request a Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
         </div>
       </div>
       <div class="mt-12 pt-6 border-t border-white/70 flex flex-col sm:flex-row justify-between gap-3 text-xs text-stone-500">
-        <p>© <span id="year"></span> Atelier Solenne. All rights reserved.</p>
-        <p>Photography: <a href="https://unsplash.com" target="_blank" rel="noopener" class="underline underline-offset-4 hover:text-ink">Unsplash</a> (free license) · Privacy · Terms</p>
+        <p>© <span id="year"></span> ENA · Eastern Narratives. All rights reserved.</p>
+        <p>From her hands to the world.</p>
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================
-       5. PRODUCT QUICK-VIEW MODAL
-  ========================================================== -->
+  <!-- ================= PRODUCT MODAL ================= -->
   <div id="modal" class="fixed inset-0 z-50 hidden opacity-0" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="absolute inset-0 bg-[#1C1917]/30 backdrop-blur-sm" data-close-modal></div>
+    <div class="absolute inset-0 bg-[#1C1917]/35 backdrop-blur-sm" data-close-modal></div>
     <div class="relative h-full w-full flex items-center justify-center p-3 sm:p-6 pointer-events-none">
       <div id="modalPanel" class="glass-strong pointer-events-auto relative w-full max-w-5xl max-h-[92vh] overflow-y-auto thin-scroll rounded-[2rem] grid md:grid-cols-2 translate-y-6 opacity-0">
-        <button class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/80 border border-white grid place-items-center hover:bg-white transition" data-close-modal aria-label="Close quick view">
-          <i data-lucide="x" class="w-4 h-4"></i>
-        </button>
-        <div class="relative p-3 md:p-4">
-          <div class="relative rounded-[1.6rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-full md:min-h-[560px]">
-            <img id="modalImg" src="" alt="" class="absolute inset-0 w-full h-full object-cover" />
-            <span id="modalBadge" class="absolute top-4 left-4 glass rounded-full px-3 py-1.5 text-xs font-semibold hidden"></span>
+        <button class="absolute top-4 right-4 z-10 w-11 h-11 rounded-full bg-white/85 border border-white grid place-items-center hover:bg-white transition" data-close-modal aria-label="Close details"><i data-lucide="x" class="w-4 h-4"></i></button>
+        <div class="p-3 md:p-4">
+          <div id="modalImgWrap" class="relative rounded-[1.6rem] overflow-hidden aspect-square bg-white">
+            <img id="modalImg" src="" alt="" class="absolute inset-0 w-full h-full" />
           </div>
+          <div id="modalThumbs" class="flex gap-2 mt-3 overflow-x-auto no-scrollbar pb-1"></div>
         </div>
         <div class="p-6 sm:p-8 md:pl-4 md:pr-10 md:py-10 flex flex-col">
-          <p id="modalCategory" class="eyebrow text-stone-500"></p>
-          <h3 id="modalTitle" class="font-serif text-4xl sm:text-[2.75rem] leading-[1.02] font-medium mt-3 pr-10"></h3>
-          <p id="modalPrice" class="text-2xl font-semibold mt-3"></p>
-          <p id="modalDesc" class="text-stone-700 text-[0.95rem] leading-relaxed mt-5"></p>
+          <p id="modalCategory" class="eyebrow text-maroon"></p>
+          <h3 id="modalTitle" class="font-serif text-4xl sm:text-[2.6rem] leading-[1.02] font-semibold mt-3 pr-10"></h3>
+          <p id="modalLine" class="text-stone-600 mt-2"></p>
+          <p id="modalDesc" class="text-stone-700 leading-relaxed mt-5"></p>
 
-          <div class="mt-6">
-            <p class="text-sm font-medium">Colour — <span id="modalColorName" class="text-stone-600 font-normal"></span></p>
-            <div id="modalSwatches" class="flex gap-2.5 mt-3"></div>
+          <div id="modalColours" class="mt-6">
+            <p class="text-sm font-medium">Colourway: <span id="modalColourName" class="text-stone-600 font-normal"></span></p>
+            <div id="modalSwatches" class="flex flex-wrap gap-2.5 mt-3"></div>
           </div>
 
-          <dl class="mt-6 glass-soft rounded-2xl divide-y divide-white/70 text-sm">
-            <div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600 flex items-center gap-2"><i data-lucide="gem" class="w-4 h-4"></i>Material</dt><dd id="modalMaterial" class="text-right font-medium"></dd></div>
-            <div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600 flex items-center gap-2"><i data-lucide="ruler" class="w-4 h-4"></i>Dimensions</dt><dd id="modalDims" class="text-right font-medium"></dd></div>
-            <div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4"></i>Style</dt><dd id="modalType" class="text-right font-medium"></dd></div>
-          </dl>
+          <dl id="modalSpecs" class="mt-6 glass-soft rounded-2xl divide-y divide-white/70 text-sm"></dl>
 
-          <div class="mt-6 flex gap-3">
-            <div class="flex items-center rounded-full bg-white/70 border border-white">
-              <button id="modalMinus" class="w-11 h-12 grid place-items-center rounded-l-full hover:bg-white transition" aria-label="Decrease quantity"><i data-lucide="minus" class="w-4 h-4"></i></button>
-              <span id="modalQty" class="w-8 text-center font-semibold" aria-live="polite">1</span>
-              <button id="modalPlus" class="w-11 h-12 grid place-items-center rounded-r-full hover:bg-white transition" aria-label="Increase quantity"><i data-lucide="plus" class="w-4 h-4"></i></button>
-            </div>
-            <button id="modalAdd" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-ink text-white px-6 h-12 text-sm font-medium hover:bg-stone-800 transition">
-              <i data-lucide="shopping-bag" class="w-4 h-4"></i> Add to Bag
+          <div class="mt-6 flex flex-wrap gap-3">
+            <button id="modalEnquire" class="flex-1 min-w-[12rem] inline-flex items-center justify-center gap-2 rounded-full bg-maroon text-white px-6 h-12 text-sm font-semibold hover:bg-maroon-deep transition">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to enquiry
             </button>
           </div>
-
-          <div class="mt-6 grid grid-cols-2 gap-3 text-xs text-stone-600">
-            <p class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4"></i>Ships in 2–4 days</p>
-            <p class="flex items-center gap-2"><i data-lucide="gift" class="w-4 h-4"></i>Complimentary gift wrap</p>
-          </div>
+          <p class="text-xs text-stone-500 mt-3">Wholesale pricing is shared with your quote.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- =========================================================
-       7. SLIDE-OVER CART DRAWER
-  ========================================================== -->
-  <div id="cartOverlay" class="fixed inset-0 z-50 bg-[#1C1917]/25 backdrop-blur-[2px] hidden opacity-0" data-close-cart></div>
-  <aside id="cartDrawer" class="fixed inset-y-0 right-0 z-50 w-full sm:max-w-md p-2 sm:p-3 translate-x-full" aria-label="Shopping bag" aria-hidden="true">
-    <div class="glass-strong h-full rounded-[2rem] flex flex-col overflow-hidden">
-      <div class="flex items-center justify-between px-6 pt-6 pb-4">
-        <div>
-          <h2 class="font-serif text-3xl font-medium">Your Bag</h2>
-          <p id="cartItemsLabel" class="text-xs text-stone-600 mt-0.5">0 items</p>
-        </div>
-        <button class="w-10 h-10 rounded-full bg-white/80 border border-white grid place-items-center hover:bg-white transition" data-close-cart aria-label="Close bag"><i data-lucide="x" class="w-4 h-4"></i></button>
-      </div>
-
-      <!-- Free shipping progress -->
-      <div class="mx-6 glass-soft rounded-2xl px-4 py-3">
-        <p id="shipMsg" class="text-xs font-medium"></p>
-        <div class="mt-2 h-1.5 rounded-full bg-white/70 overflow-hidden"><div id="shipBar" class="h-full bg-ink rounded-full transition-all duration-500" style="width:0%"></div></div>
-      </div>
-
-      <div id="cartList" class="flex-1 overflow-y-auto thin-scroll px-6 py-4 space-y-3"></div>
-
-      <div id="cartEmpty" class="hidden flex-1 flex-col items-center justify-center text-center px-8">
-        <div class="w-16 h-16 rounded-full bg-white/70 grid place-items-center"><i data-lucide="shopping-bag" class="w-6 h-6"></i></div>
-        <p class="font-serif text-2xl mt-5">Your bag is empty</p>
-        <p class="text-sm text-stone-600 mt-1">Browse the catalog to add a few pieces.</p>
-        <button data-close-cart data-goto-catalog class="mt-6 rounded-full bg-ink text-white px-6 py-3 text-sm font-medium hover:bg-stone-800 transition">Continue browsing</button>
-      </div>
-
-      <div id="cartFooter" class="px-6 pb-6 pt-4 border-t border-white/70">
-        <div class="flex justify-between text-sm text-stone-600"><span>Shipping</span><span id="cartShipping">—</span></div>
-        <div class="flex justify-between items-baseline mt-2">
-          <span class="font-medium">Subtotal</span>
-          <span id="cartSubtotal" class="font-serif text-3xl font-semibold">$0</span>
-        </div>
-        <button id="checkoutBtn" class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink text-white py-4 text-sm font-medium hover:bg-stone-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
-          <i data-lucide="lock" class="w-4 h-4"></i> Secure Checkout
-        </button>
-        <p class="text-[0.7rem] text-center text-stone-500 mt-3">Taxes calculated at checkout · 30-day returns</p>
-      </div>
-    </div>
-  </aside>
-
   <!-- Toast -->
-  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 z-[60] glass-strong rounded-full pl-2 pr-5 py-2 flex items-center gap-3 text-sm pointer-events-none" role="status" aria-live="polite">
-    <span class="w-8 h-8 shrink-0 rounded-full bg-ink text-white grid place-items-center"><i data-lucide="check" class="w-4 h-4"></i></span>
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 z-[60] glass-strong rounded-full pl-2 pr-5 py-2 flex items-center gap-3 text-sm pointer-events-none max-w-[92vw]" role="status" aria-live="polite">
+    <span class="w-8 h-8 shrink-0 rounded-full bg-maroon text-white grid place-items-center"><i data-lucide="check" class="w-4 h-4"></i></span>
     <span id="toastText"></span>
   </div>
 
-  <!-- =========================================================
-       SCRIPT
-  ========================================================== -->
   <script>
+  {
+    /* ================= CONTACT SETTINGS =================
+       Fill these in to let buyers send enquiries straight to you.
+       email:    e.g. 'trade@yourdomain.com'
+       whatsapp: international number, digits only, e.g. '923001234567'  */
+    const CONTACT = { email: '', whatsapp: '' };
+
     /* ---------- Helpers ---------- */
-    const img = (id) => `images/${id}.jpg`; // photos bundled with the page (free Unsplash license)
-    const money = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => Array.from(document.querySelectorAll(s));
     const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    const $ = (sel) => document.querySelector(sel);
-    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
     const refreshIcons = () => { if (window.lucide) lucide.createIcons(); };
+    const src = (f) => `images/${f}.jpg`;
 
-    // If an image fails to load, swap in a soft gradient placeholder so the layout never breaks.
-    function fallbackImg(el, label) {
+    window.fallbackImg = function (el, label) {
       el.onerror = null;
-      const text = esc(label || el.alt || 'Atelier Solenne');
-      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1000' viewBox='0 0 800 1000'>
-        <defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
-          <stop offset='0' stop-color='#EADBC2'/><stop offset='.55' stop-color='#D9C7B4'/><stop offset='1' stop-color='#B9C3D0'/>
-        </linearGradient></defs>
-        <rect width='800' height='1000' fill='url(#g)'/>
-        <text x='400' y='510' text-anchor='middle' font-family='Georgia,serif' font-size='44' fill='#1C1917' opacity='.55'>${text}</text>
-      </svg>`;
+      const t = esc(label || el.alt || 'ENA');
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#F1E2C6'/><stop offset='1' stop-color='#E7CFC4'/></linearGradient></defs><rect width='800' height='800' fill='url(#g)'/><text x='400' y='410' text-anchor='middle' font-family='Georgia,serif' font-size='42' fill='#7B1E3A' opacity='.6'>${t}</text></svg>`;
       el.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-    }
-
-    /* ---------- Data ---------- */
-    const C = {
-      cognac: { name: 'Cognac', hex: '#8B5A2B' }, espresso: { name: 'Espresso', hex: '#3E2A1F' },
-      bone: { name: 'Bone', hex: '#E9DFCF' }, tan: { name: 'Tan', hex: '#B07A4A' }, noir: { name: 'Noir', hex: '#1C1917' },
-      sage: { name: 'Sage', hex: '#9AA58C' }, chestnut: { name: 'Chestnut', hex: '#6E3B23' }, taupe: { name: 'Taupe', hex: '#A08C7A' },
-      midnight: { name: 'Midnight', hex: '#26344A' }, blush: { name: 'Blush', hex: '#D9B8A8' }, dove: { name: 'Dove Grey', hex: '#9C9A96' },
-      ivory: { name: 'Ivory', hex: '#F2EDE4' }, oat: { name: 'Oat', hex: '#D9CBB3' }, stone: { name: 'Stone', hex: '#B9B2A6' },
-      chalk: { name: 'Chalk', hex: '#EFEBE3' }, clay: { name: 'Clay', hex: '#C9A48A' }, slate: { name: 'Slate Blue', hex: '#7D8B9C' },
-      terracotta: { name: 'Terracotta', hex: '#C47A5A' }, indigo: { name: 'Indigo', hex: '#3B4A6B' }, saffron: { name: 'Saffron', hex: '#D4A24C' },
-      persimmon: { name: 'Persimmon', hex: '#D0784E' }, pearl: { name: 'Pearl', hex: '#EEE8DD' },
     };
 
-    const CATEGORY_LABELS = { bags: 'Leather Bags', pillows: 'Pillow Covers', sleeves: 'Laptop Sleeves' };
+    // Photos on a plain white studio background are shown whole; lifestyle shots fill their frame.
+    const STUDIO = new Set(['titli-pouch', 'gaon-pouch', 'bagh-sleeve', 'bagh-sleeve-2', 'jaal-sleeve', 'titli-sleeve', 'gulzar-sleeve']);
+    const fitClass = (f) => STUDIO.has(f) ? 'object-contain p-4 bg-white' : (f.startsWith('cushion-') ? 'object-contain bg-white' : 'object-cover');
+
+    /* ---------- Catalogue data ---------- */
+    const CATS = { leather: 'Leather Accessories', embroidered: 'Embroidered Leather', cushions: 'Cushion Covers' };
+    const LEATHER_CUSTOM = 'Logo deboss, custom colourways, branded packaging';
+    const EMB_CUSTOM = 'Logo deboss, leather colour, embroidery motif and palette';
+    const CUSHION_CUSTOM = 'Custom sizes, thread palette, base fabric colour, brand labels';
 
     const PRODUCTS = [
-      { id: 'b1', name: 'Aurelia Structured Tote', category: 'bags', type: 'Structured Tote', price: 385, rank: 1, badge: 'Bestseller',
-        material: 'Full-grain vegetable-tanned cowhide', dims: '34 × 28 × 14 cm',
-        desc: 'A clean-lined tote with a reinforced base and an inner zip pocket. It holds a 13″ laptop, and the vegetable-tanned hide darkens to a warm patina.',
-        colors: [C.cognac, C.espresso, C.bone], photo: '1624687943971-e86af76d57de' },
-      { id: 'b2', name: 'Sienna Crossbody', category: 'bags', type: 'Crossbody', price: 245, rank: 3, badge: 'New',
-        material: 'Pebbled full-grain leather, solid brass', dims: '22 × 16 × 7 cm · 120 cm strap',
-        desc: 'An everyday crossbody with an adjustable strap and a magnetic flap. It holds a phone, wallet, keys and a small notebook.',
-        colors: [C.tan, C.noir, C.sage], photo: '1718622795525-2295971921ba' },
-      { id: 'b3', name: 'Odette Bucket Bag', category: 'bags', type: 'Bucket Bag', price: 295, rank: 5,
-        material: 'Drum-dyed nappa cowhide, suede lining', dims: '24 × 26 × 18 cm',
-        desc: 'A soft, slouchy bucket bag with a drawstring top and a detachable inner pouch. The nappa is drum-dyed through, so scuffs stay the same colour.',
-        colors: [C.noir, C.chestnut, C.taupe], photo: '1702325107940-88f9cd4468c2' },
-      { id: 'b4', name: 'Celeste Evening Clutch', category: 'bags', type: 'Clutch', price: 175, rank: 7,
-        material: 'Glazed calf leather, magnetic closure', dims: '27 × 15 × 4 cm',
-        desc: 'A slim clutch in glazed calf with hand-painted edges. A hidden wrist strap tucks inside when you carry it in hand.',
-        colors: [C.espresso, C.noir, C.blush], photo: '1749294435694-ce3c586591e6' },
-      { id: 'b5', name: 'Maren Buckled Satchel', category: 'bags', type: 'Structured Satchel', price: 345, rank: 2, badge: 'Limited',
-        material: 'Full-grain leather, gilded buckles', dims: '30 × 22 × 11 cm',
-        desc: 'A structured satchel with twin buckles and a top handle. It has a removable shoulder strap and three inner compartments.',
-        colors: [C.dove, C.cognac], photo: '1605733513597-a8f8341084e6' },
+      { id: 'noor', cat: 'leather', rank: 1, tag: 'Bestseller', name: 'Noor Card Holder', line: 'Slim two-pocket leather card holder',
+        desc: 'A flat card holder with a curved thumb cut-out and a contrast inner pocket, hand-stitched around the edge and debossed with the ENA mark. It suits corporate gifting well, since the mark can be swapped for your logo.',
+        specs: [['Material', 'Leather, hand-stitched edges'], ['Size (approx.)', '10 × 7 cm'], ['Pockets', '2 card slots'], ['Customisation', LEATHER_CUSTOM]],
+        variants: [
+          { name: 'Green & Maroon', hex: '#1E4A33', hex2: '#7A1E2E', img: 'noor-green-maroon' },
+          { name: 'Bottle Green', hex: '#1F3A2C', img: 'noor-bottle-green' },
+          { name: 'Crimson & Black', hex: '#A0182A', hex2: '#1C1917', img: 'noor-crimson-black' },
+          { name: 'Tan & Ivory', hex: '#9C6B3C', hex2: '#E9E4DA', img: 'noor-tan-ivory' },
+          { name: 'Ivory & Mustard', hex: '#E6E1D6', hex2: '#B98A2E', img: 'noor-ivory-mustard' },
+          { name: 'Walnut & Cream', hex: '#7A4A26', hex2: '#EDE6DA', img: 'noor-walnut-cream' },
+        ] },
+      { id: 'kahani', cat: 'leather', rank: 2, tag: 'New', name: 'Kahani Card Sleeve', line: 'Vertical leather card sleeve with a curved pocket',
+        desc: 'A portrait-format card sleeve: one deep pocket for folded notes, with a curved front pocket for daily cards. The two-tone builds let you match a brand palette.',
+        specs: [['Material', 'Leather, hand-stitched edges'], ['Size (approx.)', '7.5 × 10.5 cm'], ['Pockets', '2 compartments'], ['Customisation', LEATHER_CUSTOM]],
+        variants: [
+          { name: 'Grey & Mustard', hex: '#B8B5AE', hex2: '#9C7A1F', img: 'kahani-grey-mustard' },
+          { name: 'Navy & Ivory', hex: '#1D2A4A', hex2: '#E9E4DA', img: 'kahani-navy-ivory' },
+          { name: 'Forest Green', hex: '#1F3B2A', img: 'kahani-forest' },
+          { name: 'Tan & Ivory', hex: '#8A5A30', hex2: '#E9E4DA', img: 'kahani-tan-ivory' },
+          { name: 'Ivory & Olive', hex: '#E3DED3', hex2: '#8C7A1E', img: 'kahani-ivory-olive' },
+          { name: 'Crimson & Black', hex: '#A3192B', hex2: '#1C1917', img: 'kahani-crimson-black' },
+        ] },
+      { id: 'safar', cat: 'leather', rank: 3, name: 'Safar Travel Wallet', line: 'Passport-size leather wallet with a tab closure',
+        desc: 'A travel wallet sized for a passport, boarding passes and cards, closed with a stitched leather tab. Popular as an executive or conference gift.',
+        specs: [['Material', 'Leather, hand-stitched edges'], ['Size (approx.)', '11 × 19 cm'], ['Closure', 'Leather tab'], ['Customisation', LEATHER_CUSTOM]],
+        variants: [
+          { name: 'Forest Green', hex: '#1F3D2E', img: 'safar-forest' },
+          { name: 'Maroon', hex: '#7E1A2C', img: 'safar-maroon' },
+          { name: 'Tan', hex: '#A8602C', img: 'safar-tan' },
+          { name: 'Mustard', hex: '#C98B2A', img: 'safar-mustard' },
+        ] },
 
-      { id: 'p1', name: 'Nuage Bouclé Cover', category: 'pillows', type: 'Textured Bouclé', price: 68, rank: 4, badge: 'Bestseller',
-        material: 'Wool-blend bouclé, hidden zip', dims: '50 × 50 cm',
-        desc: 'A looped bouclé with a soft, cloud-like texture. The concealed zip and piped edges keep it neat on a sofa or bed.',
-        colors: [C.ivory, C.oat, C.stone], photo: '1629949009765-40fc74c9ec21' },
-      { id: 'p2', name: 'Rivage Stonewashed Linen', category: 'pillows', type: 'Stonewashed Linen', price: 58, rank: 6,
-        material: '320 GSM hand-loomed flax linen', dims: '45 × 45 cm',
-        desc: 'Heavyweight linen, stonewashed for a relaxed, rumpled finish. It is breathable year-round and gets softer each wash.',
-        colors: [C.chalk, C.clay, C.slate], photo: '1611490135455-3a02bb9eb653' },
-      { id: 'p3', name: 'Anatolia Woven Kilim', category: 'pillows', type: 'Woven Kilim', price: 92, rank: 9, badge: 'Artisan',
-        material: 'Hand-woven wool kilim, linen back', dims: '40 × 60 cm',
-        desc: 'A flat-woven kilim in a geometric pattern, backed in natural linen. Because each one is woven by hand, no two are exactly alike.',
-        colors: [C.terracotta, C.indigo, C.saffron], photo: '1557502236-b389b3a38a7d' },
-      { id: 'p4', name: 'Soie Raw Silk Cover', category: 'pillows', type: 'Raw Silk', price: 84, rank: 10,
-        material: 'Raw dupioni silk, cotton sateen back', dims: '50 × 50 cm',
-        desc: 'Raw silk with a natural slub and a quiet sheen that shifts in the light. Backed in cotton sateen for durability.',
-        colors: [C.pearl, C.persimmon, C.sage], photo: '1611489704434-2612dc89c992' },
+      { id: 'bagh-sleeve', cat: 'embroidered', rank: 4, tag: 'Signature', name: 'Bagh Laptop Sleeve', line: 'Taupe leather envelope with an embroidered garden panel',
+        desc: 'An envelope-style laptop sleeve in soft taupe leather, framing a panel of dense floral embroidery. A stitched strap with a press-stud keeps the flap closed.',
+        specs: [['Material', 'Leather with an embroidered fabric panel'], ['Fit', 'Made to your laptop size (13″–16″)'], ['Closure', 'Strap with press-stud'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Taupe', hex: '#CBBFB2', img: 'bagh-sleeve-styled' }], gallery: ['bagh-sleeve', 'bagh-sleeve-2'] },
+      { id: 'titli-sleeve', cat: 'embroidered', rank: 6, name: 'Titli Laptop Sleeve', line: 'Brown leather envelope with an embroidered butterfly panel',
+        desc: 'Butterflies in warm reds and golds, embroidered on an ivory panel and framed in brown leather. The flap closes with magnetic snaps.',
+        specs: [['Material', 'Leather with an embroidered fabric panel'], ['Fit', 'Made to your laptop size (13″–16″)'], ['Closure', 'Magnetic snaps'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Chocolate', hex: '#5A3424', img: 'titli-sleeve' }] },
+      { id: 'gulzar-sleeve', cat: 'embroidered', rank: 7, name: 'Gulzar Laptop Sleeve', line: 'Tan leather envelope with a blooming floral panel',
+        desc: 'Large blooms in coral, blue and saffron, set into a tan leather envelope sleeve. It is the brightest of the sleeve designs.',
+        specs: [['Material', 'Leather with an embroidered fabric panel'], ['Fit', 'Made to your laptop size (13″–16″)'], ['Closure', 'Magnetic snaps'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Tan', hex: '#B5652C', img: 'gulzar-sleeve' }] },
+      { id: 'jaal-sleeve', cat: 'embroidered', rank: 9, name: 'Jaal Laptop Sleeve', line: 'Taupe leather envelope with a saffron lattice panel',
+        desc: 'A graphic triangle lattice in saffron and white, framed by taupe leather. Clean enough for corporate gifting, bold enough for retail.',
+        specs: [['Material', 'Leather with an embroidered fabric panel'], ['Fit', 'Made to your laptop size (13″–16″)'], ['Closure', 'Magnetic snaps'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Taupe & Saffron', hex: '#CBBFB2', hex2: '#E2B21C', img: 'jaal-sleeve' }] },
+      { id: 'titli-pouch', cat: 'embroidered', rank: 5, name: 'Titli Zip Pouch', line: 'Maroon leather-trimmed pouch with butterflies',
+        desc: 'A roomy zip-top pouch with a maroon leather band and an outer zip pocket. The front is embroidered with a flight of butterflies. Use it as a tech pouch, a travel organiser or a clutch.',
+        specs: [['Material', 'Leather trim with an embroidered fabric body'], ['Size (approx.)', '28 × 20 cm'], ['Closure', 'Zip top and front zip pocket'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Maroon', hex: '#6E1F2C', img: 'titli-pouch-styled' }], gallery: ['titli-pouch'] },
+      { id: 'jaal-pouch', cat: 'embroidered', rank: 8, name: 'Jaal Zip Pouch', line: 'Ivory leather pouch with a saffron lattice',
+        desc: 'An ivory leather top band with a zip pocket, over a saffron lattice panel. It pairs with the Jaal Laptop Sleeve as a matching gift set.',
+        specs: [['Material', 'Leather trim with an embroidered fabric body'], ['Size (approx.)', '28 × 20 cm'], ['Closure', 'Zip top and front zip pocket'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Ivory & Saffron', hex: '#E7E0D2', hex2: '#D8A51E', img: 'jaal-pouch' }] },
+      { id: 'gaon-pouch', cat: 'embroidered', rank: 10, name: 'Gaon Zip Pouch', line: 'Crimson pouch with a village-life folk panel',
+        desc: 'A flat zip pouch framed in crimson, with a folk panel of village scenes: dancers, huts, trees and elephants.',
+        specs: [['Material', 'Leather frame with a printed folk-art panel'], ['Size (approx.)', '25 × 17 cm'], ['Closure', 'Zip top'], ['Customisation', EMB_CUSTOM]],
+        variants: [{ name: 'Crimson', hex: '#9E1B2F', img: 'gaon-pouch' }] },
 
-      { id: 's1', name: 'Verso 13″ Sleeve', category: 'sleeves', type: 'Full-grain Sleeve · 13″', price: 145, rank: 8,
-        material: 'Full-grain cowhide, merino felt lining', dims: '33 × 24 × 1.5 cm · fits 13″ laptops',
-        desc: 'A slim sleeve cut from one piece of hide and lined with merino felt to protect against scratches. The edges are hand-burnished.',
-        colors: [C.noir, C.cognac], photo: '1657603571233-5e9860e96d00' },
-      { id: 's2', name: 'Verso 14″ Zip Folio', category: 'sleeves', type: 'Zippered Folio · 14″', price: 185, rank: 11, badge: 'New',
-        material: 'Full-grain cowhide, YKK zip, microsuede', dims: '35 × 26 × 2.5 cm · fits 14″ laptops',
-        desc: 'A zippered folio with a carry handle and a front pocket for a charger, cables and notes.',
-        colors: [C.cognac, C.noir, C.espresso], photo: '1688296524524-9ae7601f0877' },
-      { id: 's3', name: 'Verso 16″ Sleeve', category: 'sleeves', type: 'Full-grain Sleeve · 16″', price: 175, rank: 12,
-        material: 'Full-grain cowhide, merino felt lining', dims: '38 × 28 × 1.6 cm · fits 16″ laptops',
-        desc: 'The larger Verso, with a closure strap and a hidden magnet. It is cut for 16″ laptops and padded at the corners.',
-        colors: [C.espresso, C.tan, C.noir], photo: '1657603635372-023411921d31' },
+      { id: 'suzani-medallion', cat: 'cushions', rank: 11, tag: 'Bestseller', name: 'Suzani Medallion Cushion', line: 'Square cover · central medallion with floral border',
+        desc: 'A sunburst medallion in navy, red and saffron, surrounded by scrolling flowers on a cream ground. The fullest design in the range.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'As shown', hex: '#F1E9DA', img: 'cushion-suzani-medallion' }] },
+      { id: 'jharoka', cat: 'cushions', rank: 12, name: 'Jharoka Cushion', line: 'Square cover · arches, lanterns and flowering urns',
+        desc: 'Window arches and lanterns stitched in gold, slate and maroon on a natural linen-look ground. Inspired by carved balcony windows.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Natural', hex: '#CDBFA6', img: 'cushion-jharoka' }] },
+      { id: 'shamsa', cat: 'cushions', rank: 13, name: 'Shamsa Cushion', line: 'Square cover · floral sunburst medallion',
+        desc: 'A single medallion of red and slate petals radiating from the centre, on a textured sand ground.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Sand', hex: '#D7C6AA', img: 'cushion-shamsa' }] },
+      { id: 'suzani-lumbar', cat: 'cushions', rank: 14, name: 'Suzani Lumbar Cushion', line: 'Lumbar cover · pomegranates and paisleys',
+        desc: 'Pomegranates, paisleys and rosettes fill this lumbar cover edge to edge, finished with a piped border.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '30 × 50 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Cream', hex: '#EADFCB', img: 'cushion-suzani-lumbar' }] },
+      { id: 'tulip-vine', cat: 'cushions', rank: 15, name: 'Tulip Vine Cushion', line: 'Square cover · tulip and carnation columns',
+        desc: 'Columns of tulips and carnations in red, blue and olive, embroidered on an ivory ground.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Ivory', hex: '#F1EADD', img: 'cushion-tulip-vine' }] },
+      { id: 'gul-e-lala', cat: 'cushions', rank: 16, name: 'Gul-e-Lala Cushion', line: 'Square cover · carnation repeat on herringbone',
+        desc: 'Rows of red carnation fans and small buds on a herringbone-textured cream ground.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Cream', hex: '#EADFC9', img: 'cushion-gul-e-lala' }] },
+      { id: 'gul-e-lala-lumbar', cat: 'cushions', rank: 17, name: 'Gul-e-Lala Lumbar Cushion', line: 'Lumbar cover · three carnation fans',
+        desc: 'The lumbar companion to the Gul-e-Lala square, with three bold carnation fans across a herringbone ground.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '30 × 50 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Sand', hex: '#DCCBB0', img: 'cushion-gul-e-lala-lumbar' }] },
+      { id: 'chambeli', cat: 'cushions', rank: 18, name: 'Chambeli Lumbar Cushion', line: 'Lumbar cover · jasmine sprigs on crimson',
+        desc: 'Ivory and gold jasmine sprigs scattered across a deep crimson weave. A rich accent for festive and hospitality settings.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '30 × 50 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Crimson', hex: '#A21E22', img: 'cushion-chambeli-lumbar' }] },
+      { id: 'mehrab', cat: 'cushions', rank: 19, name: 'Mehrab Cushion', line: 'Square cover · arches and lanterns, spaced',
+        desc: 'A lighter, more open take on the Jharoka motif: corner arches and lanterns with plenty of linen ground showing.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Stone', hex: '#C2B8A6', img: 'cushion-mehrab' }] },
+      { id: 'bel', cat: 'cushions', rank: 20, name: 'Bel Cushion', line: 'Square cover · berry branch and leaves',
+        desc: 'A sweeping branch of olive leaves and red berries across a natural ground, quieter and more botanical than the medallions.',
+        specs: [['Technique', 'Hand embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Natural', hex: '#D9C9AE', img: 'cushion-bel' }] },
+      { id: 'chandni', cat: 'cushions', rank: 21, name: 'Chandni Cushion', line: 'Square cover · cutwork roundel on silver sheen',
+        desc: 'A tonal cutwork roundel of roses set on a silver-champagne fabric with a soft sheen. Made for evening and hospitality interiors.',
+        specs: [['Technique', 'Cutwork embroidery'], ['Size', '45 × 45 cm (other sizes on request)'], ['Closure', 'Concealed zip'], ['Customisation', CUSHION_CUSTOM]],
+        variants: [{ name: 'Silver', hex: '#A99F92', img: 'cushion-chandni' }] },
     ];
-
     const byId = (id) => PRODUCTS.find((p) => p.id === id);
 
     /* ---------- State ---------- */
-    const FREE_SHIP = 250;
-    const state = { category: 'all', sort: 'featured', query: '', cart: loadCart() };
-    const modalState = { id: null, color: 0, qty: 1 };
+    const state = { cat: 'all', sort: 'featured', q: '', picks: [] };
+    const cardVariant = {};             // product id -> variant index shown on its card
+    const modal = { id: null, v: 0, img: null };
 
-    function loadCart() {
-      try { return JSON.parse(localStorage.getItem('solenne-cart') || '[]').filter((i) => i && byId(i.id) && i.qty > 0); }
-      catch (e) { return []; }
-    }
-    function saveCart() {
-      try { localStorage.setItem('solenne-cart', JSON.stringify(state.cart)); } catch (e) { /* storage unavailable */ }
-    }
+    try { state.picks = JSON.parse(localStorage.getItem('ena-enquiry') || '[]').filter((s) => typeof s === 'string').slice(0, 40); } catch (e) { state.picks = []; }
+    const savePicks = () => { try { localStorage.setItem('ena-enquiry', JSON.stringify(state.picks)); } catch (e) {} };
 
-    /* ---------- Catalog rendering ---------- */
-    function visibleProducts() {
-      const q = state.query.trim().toLowerCase();
-      let list = PRODUCTS.filter((p) => state.category === 'all' || p.category === state.category);
-      if (q) {
-        list = list.filter((p) =>
-          [p.name, p.type, p.material, CATEGORY_LABELS[p.category], p.colors.map((c) => c.name).join(' ')]
-            .join(' ').toLowerCase().includes(q));
-      }
+    /* ---------- Catalogue ---------- */
+    function swatchStyle(v) { return v.hex2 ? `background:linear-gradient(135deg, ${v.hex} 50%, ${v.hex2} 50%)` : `background:${v.hex}`; }
+
+    function visible() {
+      const q = state.q.trim().toLowerCase();
+      let list = PRODUCTS.filter((p) => state.cat === 'all' || p.cat === state.cat);
+      if (q) list = list.filter((p) => [p.name, p.line, p.desc, CATS[p.cat], p.variants.map((v) => v.name).join(' ')].join(' ').toLowerCase().includes(q));
       const sorters = {
         featured: (a, b) => a.rank - b.rank,
-        low: (a, b) => a.price - b.price || a.rank - b.rank,
-        high: (a, b) => b.price - a.price || a.rank - b.rank,
+        az: (a, b) => a.name.localeCompare(b.name),
+        colours: (a, b) => b.variants.length - a.variants.length || a.rank - b.rank,
       };
       return list.sort(sorters[state.sort]);
     }
 
-    function productCard(p, i) {
-      const swatches = p.colors.map((c) =>
-        `<span class="w-3.5 h-3.5 rounded-full ring-1 ring-black/10 ring-offset-1 ring-offset-white/40" style="background:${c.hex}" title="${esc(c.name)}"></span>`).join('');
+    function card(p, i) {
+      const vi = cardVariant[p.id] || 0, v = p.variants[vi];
+      const multi = p.variants.length > 1;
+      const sw = multi ? p.variants.map((x, j) =>
+        `<button data-cardswatch="${p.id}:${j}" class="w-5 h-5 rounded-full ring-offset-2 ring-offset-white/60 transition ${j === vi ? 'ring-2 ring-ink' : 'ring-1 ring-black/15 hover:ring-black/40'}" style="${swatchStyle(x)}" aria-label="${esc(p.name)}, ${esc(x.name)}" title="${esc(x.name)}"></button>`).join('') : '';
       return `
-      <article class="card-enter group glass rounded-[1.75rem] p-2.5 flex flex-col cursor-pointer hover:-translate-y-1 hover:shadow-lift transition duration-300"
-               style="animation-delay:${Math.min(i, 8) * 45}ms" data-open="${p.id}" tabindex="0" role="button" aria-label="Quick view ${esc(p.name)}">
-        <div class="relative aspect-[4/5] rounded-[1.35rem] overflow-hidden bg-white/40">
-          <img src="${img(p.photo, 700)}" alt="${esc(p.name)}" loading="lazy" class="img-zoom w-full h-full object-cover" onerror="fallbackImg(this,'${esc(CATEGORY_LABELS[p.category])}')" />
-          <span class="absolute top-3 left-3 glass rounded-full px-3 py-1 text-[0.68rem] font-semibold">${esc(CATEGORY_LABELS[p.category])}</span>
-          ${p.badge ? `<span class="absolute top-3 right-3 rounded-full bg-ink text-white px-3 py-1 text-[0.68rem] font-semibold">${esc(p.badge)}</span>` : ''}
-          <span class="absolute inset-x-3 bottom-3 glass rounded-full py-2 text-xs font-medium flex items-center justify-center gap-1.5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
-            <i data-lucide="eye" class="w-3.5 h-3.5"></i> Quick view
-          </span>
+      <article class="card-enter group glass rounded-[1.75rem] p-2.5 flex flex-col cursor-pointer hover:-translate-y-1 hover:shadow-lift transition duration-300" style="animation-delay:${Math.min(i, 8) * 45}ms" data-open="${p.id}" tabindex="0" role="button" aria-label="View details: ${esc(p.name)}">
+        <div class="relative aspect-square rounded-[1.35rem] overflow-hidden bg-white">
+          <img src="${src(v.img)}" alt="${esc(p.name)} in ${esc(v.name)}" loading="lazy" class="img-zoom w-full h-full ${fitClass(v.img)}" onerror="fallbackImg(this,'${esc(CATS[p.cat])}')" />
+          <span class="absolute top-3 left-3 glass rounded-full px-3 py-1 text-[0.68rem] font-semibold">${esc(CATS[p.cat])}</span>
+          ${p.tag ? `<span class="absolute bottom-3 left-3 rounded-full bg-maroon text-white px-3 py-1 text-[0.68rem] font-semibold shadow">${esc(p.tag)}</span>` : ''}
         </div>
         <div class="px-2.5 pt-4 pb-2 flex flex-col flex-1">
-          <p class="text-[0.7rem] uppercase tracking-[0.16em] text-stone-500 font-semibold">${esc(p.type)}</p>
-          <h3 class="font-serif text-[1.45rem] leading-tight font-medium mt-1">${esc(p.name)}</h3>
-          <p class="text-xs text-stone-600 mt-1.5 leading-relaxed">${esc(p.material)}<br><span class="text-stone-500">${esc(p.dims)}</span></p>
-          <div class="flex items-center gap-2 mt-3">${swatches}</div>
-          <div class="flex items-center justify-between mt-auto pt-4">
-            <span class="text-lg font-semibold">${money(p.price)}</span>
-            <button data-add="${p.id}" class="inline-flex items-center gap-1 rounded-full bg-ink text-white pl-3 pr-4 py-2 text-xs font-semibold hover:bg-stone-800 active:scale-95 transition" aria-label="Add ${esc(p.name)} to bag">
-              <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add
+          <h3 class="font-serif text-[1.5rem] leading-tight font-semibold">${esc(p.name)}</h3>
+          <p class="text-xs text-stone-600 mt-1 leading-relaxed">${esc(p.line)}</p>
+          ${multi ? `<div class="flex flex-wrap items-center gap-2 mt-3">${sw}<span class="text-[0.7rem] text-stone-500 ml-1">${p.variants.length} colourways</span></div>` : ''}
+          <div class="flex items-center justify-between gap-2 mt-auto pt-4">
+            <span class="text-xs font-medium text-stone-600">Price on request</span>
+            <button data-enquire="${p.id}" class="inline-flex items-center gap-1 rounded-full bg-maroon text-white pl-3 pr-4 py-2 text-xs font-semibold hover:bg-maroon-deep active:scale-95 transition" aria-label="Add ${esc(p.name)} to enquiry">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> Enquire
             </button>
           </div>
         </div>
@@ -708,310 +725,212 @@
     }
 
     function renderCatalog() {
-      const list = visibleProducts();
-      $('#productGrid').innerHTML = list.map(productCard).join('');
-      $('#productGrid').classList.toggle('hidden', list.length === 0);
-      $('#emptyState').classList.toggle('hidden', list.length !== 0);
-
-      const catText = state.category === 'all' ? 'all collections' : CATEGORY_LABELS[state.category].toLowerCase();
-      $('#resultCount').textContent = `Showing ${list.length} ${list.length === 1 ? 'piece' : 'pieces'} from ${catText}`;
-      $('#emptyText').textContent = state.query.trim()
-        ? `No results for "${state.query.trim()}" in ${catText}. Try another word or clear the filters.`
-        : 'Try another category.';
-
-      // Active query chip
-      const chip = $('#activeQuery');
-      if (state.query.trim()) {
-        chip.innerHTML = `“${esc(state.query.trim())}” <button id="clearQuery" class="w-5 h-5 rounded-full grid place-items-center hover:bg-stone-200" aria-label="Clear search"><i data-lucide="x" class="w-3 h-3"></i></button>`;
-        chip.classList.remove('hidden'); chip.classList.add('inline-flex');
-      } else {
-        chip.classList.add('hidden'); chip.classList.remove('inline-flex');
-      }
-
-      // Tabs + nav link states
+      const list = visible();
+      $('#productGrid').innerHTML = list.map(card).join('');
+      $('#productGrid').classList.toggle('hidden', !list.length);
+      $('#emptyState').classList.toggle('hidden', !!list.length);
+      const where = state.cat === 'all' ? 'all collections' : CATS[state.cat];
+      $('#resultCount').textContent = `${list.length} ${list.length === 1 ? 'design' : 'designs'} · ${where}`;
+      $('#emptyText').textContent = state.q.trim() ? `Nothing matches "${state.q.trim()}" in ${where}.` : 'Try another collection.';
       $$('.tab').forEach((t) => {
-        const on = t.dataset.tab === state.category;
+        const on = t.dataset.tab === state.cat;
         t.setAttribute('aria-selected', on);
-        t.classList.toggle('bg-ink', on); t.classList.toggle('text-white', on);
-        t.classList.toggle('hover:bg-white/60', !on);
-      });
-      $$('.nav-link').forEach((l) => {
-        const on = l.dataset.navFilter === state.category;
-        l.classList.toggle('bg-white/70', on);
-        l.classList.toggle('shadow-sm', on);
+        t.classList.toggle('bg-maroon', on); t.classList.toggle('text-white', on); t.classList.toggle('hover:bg-white/60', !on);
       });
       refreshIcons();
     }
+    function setCat(c, scroll = true) { state.cat = c; renderCatalog(); if (scroll) $('#catalog').scrollIntoView({ behavior: 'smooth' }); }
 
-    function setCategory(cat, scroll = true) {
-      state.category = cat;
-      renderCatalog();
-      if (scroll) $('#catalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    /* ---------- Quick-view modal ---------- */
+    /* ---------- Modal ---------- */
     let lastFocus = null;
-
-    function openModal(id) {
-      const p = byId(id); if (!p) return;
-      lastFocus = document.activeElement;
-      Object.assign(modalState, { id, color: 0, qty: 1 });
-
-      const mImg = $('#modalImg');
-      mImg.onerror = () => fallbackImg(mImg, CATEGORY_LABELS[p.category]);
-      mImg.src = img(p.photo, 1200); mImg.alt = p.name;
-      $('#modalCategory').textContent = CATEGORY_LABELS[p.category];
+    function images(p) { return [...new Set([...p.variants.map((v) => v.img), ...(p.gallery || [])])]; }
+    function setModalImage(f) {
+      modal.img = f;
+      const im = $('#modalImg'), p = byId(modal.id);
+      im.className = 'absolute inset-0 w-full h-full ' + fitClass(f);
+      im.onerror = () => fallbackImg(im, CATS[p.cat]);
+      im.src = src(f); im.alt = `${p.name}`;
+      $$('#modalThumbs [data-thumb]').forEach((b) => b.classList.toggle('ring-2', b.dataset.thumb === f));
+    }
+    function renderModal() {
+      const p = byId(modal.id), v = p.variants[modal.v];
+      $('#modalCategory').textContent = CATS[p.cat];
       $('#modalTitle').textContent = p.name;
-      $('#modalPrice').textContent = money(p.price);
+      $('#modalLine').textContent = p.line;
       $('#modalDesc').textContent = p.desc;
-      $('#modalMaterial').textContent = p.material;
-      $('#modalDims').textContent = p.dims;
-      $('#modalType').textContent = p.type;
-      const badge = $('#modalBadge');
-      badge.textContent = p.badge || ''; badge.classList.toggle('hidden', !p.badge);
-      renderModalSwatches();
-      $('#modalQty').textContent = '1';
-
-      const modal = $('#modal'), panel = $('#modalPanel');
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(() => {
-        modal.classList.remove('opacity-0');
-        panel.classList.remove('translate-y-6', 'opacity-0');
-      });
+      $('#modalSpecs').innerHTML = p.specs.map(([k, val]) => `<div class="flex justify-between gap-4 px-4 py-3"><dt class="text-stone-600">${esc(k)}</dt><dd class="text-right font-medium">${esc(val)}</dd></div>`).join('');
+      const multi = p.variants.length > 1;
+      $('#modalColours').classList.toggle('hidden', !multi);
+      $('#modalColourName').textContent = v.name;
+      $('#modalSwatches').innerHTML = multi ? p.variants.map((x, i) =>
+        `<button data-swatch="${i}" aria-label="${esc(x.name)}" aria-pressed="${i === modal.v}" class="w-10 h-10 rounded-full ring-offset-2 ring-offset-white/60 transition ${i === modal.v ? 'ring-2 ring-ink' : 'ring-1 ring-black/15 hover:ring-black/40'}" style="${swatchStyle(x)}"></button>`).join('') : '';
+      const imgs = images(p);
+      $('#modalThumbs').innerHTML = imgs.length > 1 ? imgs.map((f) =>
+        `<button data-thumb="${f}" class="w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-white ring-ink ring-offset-2 ring-offset-white/60" aria-label="Show photo"><img src="${src(f)}" alt="" class="w-full h-full ${fitClass(f).replace('p-4', 'p-1')}" /></button>`).join('') : '';
+      setModalImage(v.img);
+      $('#modalEnquire').innerHTML = `<i data-lucide="plus" class="w-4 h-4"></i> Add ${multi ? esc(v.name) + ' ' : ''}to enquiry`;
+      refreshIcons();
+    }
+    function openModal(id) {
+      if (!byId(id)) return;
+      lastFocus = document.activeElement;
+      modal.id = id; modal.v = cardVariant[id] || 0;
+      renderModal();
+      const m = $('#modal'), panel = $('#modalPanel');
+      m.classList.remove('hidden'); document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => { m.classList.remove('opacity-0'); panel.classList.remove('translate-y-6', 'opacity-0'); });
       panel.scrollTop = 0;
-      setTimeout(() => $('#modalAdd').focus({ preventScroll: true }), 50);
-      refreshIcons();
+      setTimeout(() => $('#modalEnquire').focus({ preventScroll: true }), 60);
     }
-
-    function renderModalSwatches() {
-      const p = byId(modalState.id);
-      $('#modalSwatches').innerHTML = p.colors.map((c, i) => `
-        <button data-swatch="${i}" aria-label="${esc(c.name)}" aria-pressed="${i === modalState.color}"
-          class="w-9 h-9 rounded-full ring-offset-2 ring-offset-white/60 transition ${i === modalState.color ? 'ring-2 ring-ink' : 'ring-1 ring-black/10 hover:ring-black/30'}"
-          style="background:${c.hex}"></button>`).join('');
-      $('#modalColorName').textContent = p.colors[modalState.color].name;
-    }
-
     function closeModal() {
-      const modal = $('#modal'), panel = $('#modalPanel');
-      if (modal.classList.contains('hidden')) return;
-      modal.classList.add('opacity-0');
-      panel.classList.add('translate-y-6', 'opacity-0');
-      setTimeout(() => {
-        modal.classList.add('hidden');
-        if (!isCartOpen()) document.body.style.overflow = '';
-        if (lastFocus && document.body.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
-      }, 280);
+      const m = $('#modal'); if (m.classList.contains('hidden')) return;
+      m.classList.add('opacity-0'); $('#modalPanel').classList.add('translate-y-6', 'opacity-0');
+      setTimeout(() => { m.classList.add('hidden'); document.body.style.overflow = ''; if (lastFocus && document.body.contains(lastFocus)) lastFocus.focus({ preventScroll: true }); }, 280);
     }
 
-    /* ---------- Cart ---------- */
-    function addToCart(id, colorIndex = 0, qty = 1) {
-      const p = byId(id); if (!p) return;
-      const color = p.colors[colorIndex].name;
-      const key = `${id}::${color}`;
-      const existing = state.cart.find((i) => i.key === key);
-      if (existing) existing.qty += qty;
-      else state.cart.push({ key, id, color, qty });
-      saveCart(); renderCart();
-      const badge = $('#cartCount');
-      badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
-      showToast(`${p.name} (${color}) added to your bag`);
+    /* ---------- Enquiry list (lives inside the form) ---------- */
+    function addPick(label) {
+      if (!state.picks.includes(label)) state.picks.push(label);
+      savePicks(); renderPicks();
+      showToast(`${label} added to your enquiry`);
     }
-
-    function changeQty(key, delta) {
-      const item = state.cart.find((i) => i.key === key); if (!item) return;
-      item.qty += delta;
-      if (item.qty <= 0) state.cart = state.cart.filter((i) => i.key !== key);
-      saveCart(); renderCart();
-    }
-
-    function removeItem(key) {
-      state.cart = state.cart.filter((i) => i.key !== key);
-      saveCart(); renderCart();
-    }
-
-    function renderCart() {
-      const count = state.cart.reduce((s, i) => s + i.qty, 0);
-      const subtotal = state.cart.reduce((s, i) => s + byId(i.id).price * i.qty, 0);
-      $('#cartCount').textContent = count;
-      $('#cartItemsLabel').textContent = `${count} ${count === 1 ? 'item' : 'items'}`;
-      $('#cartSubtotal').textContent = money(subtotal);
-
-      const remaining = Math.max(0, FREE_SHIP - subtotal);
-      $('#shipMsg').innerHTML = count === 0
-        ? `Free shipping on orders over ${money(FREE_SHIP)}`
-        : remaining > 0
-          ? `You're <strong>${money(remaining)}</strong> away from free shipping`
-          : `You've unlocked free shipping ✦`;
-      $('#shipBar').style.width = Math.min(100, (subtotal / FREE_SHIP) * 100) + '%';
-      $('#cartShipping').textContent = count === 0 ? '—' : remaining > 0 ? 'Calculated at checkout' : 'Free';
-
-      const empty = count === 0;
-      $('#cartList').classList.toggle('hidden', empty);
-      $('#cartEmpty').classList.toggle('hidden', !empty);
-      $('#cartEmpty').classList.toggle('flex', empty);
-      $('#checkoutBtn').disabled = empty;
-
-      $('#cartList').innerHTML = state.cart.map((item) => {
-        const p = byId(item.id);
-        const hex = (p.colors.find((c) => c.name === item.color) || p.colors[0]).hex;
-        return `
-        <div class="glass rounded-2xl p-2.5 flex gap-3">
-          <img src="${img(p.photo, 240)}" alt="${esc(p.name)}" class="w-20 h-24 rounded-xl object-cover shrink-0" onerror="fallbackImg(this,'${esc(CATEGORY_LABELS[p.category])}')" />
-          <div class="flex-1 min-w-0 flex flex-col py-0.5">
-            <div class="flex justify-between gap-2">
-              <p class="font-serif text-lg leading-tight font-medium truncate">${esc(p.name)}</p>
-              <button data-remove="${esc(item.key)}" class="w-7 h-7 shrink-0 rounded-full grid place-items-center text-stone-500 hover:bg-white/80 hover:text-ink transition" aria-label="Remove ${esc(p.name)}"><i data-lucide="trash-2" class="w-3.5 h-3.5"></i></button>
-            </div>
-            <p class="text-xs text-stone-600 flex items-center gap-1.5 mt-0.5"><span class="w-2.5 h-2.5 rounded-full ring-1 ring-black/10" style="background:${hex}"></span>${esc(item.color)} · ${money(p.price)}</p>
-            <div class="flex items-center justify-between mt-auto pt-2">
-              <div class="flex items-center rounded-full bg-white/70 border border-white">
-                <button data-dec="${esc(item.key)}" class="w-8 h-8 grid place-items-center rounded-full hover:bg-white transition" aria-label="Decrease quantity"><i data-lucide="minus" class="w-3.5 h-3.5"></i></button>
-                <span class="w-6 text-center text-sm font-semibold">${item.qty}</span>
-                <button data-inc="${esc(item.key)}" class="w-8 h-8 grid place-items-center rounded-full hover:bg-white transition" aria-label="Increase quantity"><i data-lucide="plus" class="w-3.5 h-3.5"></i></button>
-              </div>
-              <span class="text-sm font-semibold">${money(p.price * item.qty)}</span>
-            </div>
-          </div>
-        </div>`;
-      }).join('');
+    function renderPicks() {
+      const box = $('#enquiryChips');
+      box.innerHTML = state.picks.length
+        ? state.picks.map((l, i) => `<span class="inline-flex items-center gap-1.5 rounded-full bg-white border border-white px-3 py-1.5 text-xs font-medium shadow-sm">${esc(l)}<button type="button" data-unpick="${i}" class="w-5 h-5 rounded-full grid place-items-center hover:bg-stone-100" aria-label="Remove ${esc(l)}"><i data-lucide="x" class="w-3 h-3"></i></button></span>`).join('')
+        : `<span class="text-sm text-stone-500 px-2 py-1.5">Nothing added yet. Use <strong>Enquire</strong> on any design, or describe your needs below.</span>`;
       refreshIcons();
     }
 
-    const isCartOpen = () => !$('#cartDrawer').classList.contains('translate-x-full');
-
-    function openCart() {
-      const overlay = $('#cartOverlay');
-      overlay.classList.remove('hidden');
-      requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
-      $('#cartDrawer').classList.remove('translate-x-full');
-      $('#cartDrawer').setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+    /* ---------- Contact wiring ---------- */
+    function renderContact() {
+      const lines = [];
+      if (CONTACT.email) lines.push(`<p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>${esc(CONTACT.email)}</p>`);
+      if (CONTACT.whatsapp) lines.push(`<p class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i>+${esc(CONTACT.whatsapp)}</p>`);
+      $('#contactLines').innerHTML = lines.join('');
+      $('#footerContact').innerHTML = lines.length ? lines.join('') : '<p class="text-stone-600">Use the quote form to reach our trade team.</p>';
     }
-    function closeCart() {
-      const overlay = $('#cartOverlay');
-      overlay.classList.add('opacity-0');
-      $('#cartDrawer').classList.add('translate-x-full');
-      $('#cartDrawer').setAttribute('aria-hidden', 'true');
-      setTimeout(() => overlay.classList.add('hidden'), 280);
-      if ($('#modal').classList.contains('hidden')) document.body.style.overflow = '';
+
+    function buildSummary(d) {
+      const rows = [
+        'ENA · Eastern Narratives: wholesale enquiry', '',
+        `Name: ${d.name}`, `Company: ${d.company}`, `Email: ${d.email}`,
+        d.phone ? `Phone / WhatsApp: ${d.phone}` : null, d.country ? `Country: ${d.country}` : null,
+        `Order type: ${d.type}`, d.qty ? `Estimated quantity: ${d.qty}` : null, d.date ? `Needed by: ${d.date}` : null, '',
+        'Designs of interest:', ...(state.picks.length ? state.picks.map((p) => `• ${p}`) : ['• Not specified']),
+        d.message ? '' : null, d.message ? `Details: ${d.message}` : null,
+      ];
+      return rows.filter((r) => typeof r === 'string').join('\n').replace(/\n{3,}/g, '\n\n').trim();
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const f = e.target, d = Object.fromEntries(new FormData(f).entries());
+      Object.keys(d).forEach((k) => (d[k] = String(d[k]).trim()));
+      const err = $('#formError');
+      const missing = [];
+      if (!d.name) missing.push('your name'); if (!d.company) missing.push('company');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) missing.push('a valid email'); if (!d.type) missing.push('order type');
+      if (missing.length) { err.textContent = `Please add ${missing.join(', ')}.`; err.classList.remove('hidden'); return; }
+      err.classList.add('hidden');
+
+      const summary = buildSummary(d);
+      $('#enquirySummary').textContent = summary;
+      const subject = encodeURIComponent(`Wholesale enquiry: ${d.company}`);
+      const body = encodeURIComponent(summary);
+      const actions = [`<button type="button" id="copyEnquiry" class="inline-flex items-center gap-2 rounded-full bg-ink text-white px-5 py-3 text-sm font-medium hover:bg-stone-800 transition"><i data-lucide="copy" class="w-4 h-4"></i> Copy enquiry</button>`];
+      if (CONTACT.whatsapp) actions.unshift(`<a href="https://wa.me/${encodeURIComponent(CONTACT.whatsapp)}?text=${body}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-teal text-white px-5 py-3 text-sm font-semibold hover:opacity-90 transition"><i data-lucide="message-circle" class="w-4 h-4"></i> Send on WhatsApp</a>`);
+      if (CONTACT.email) actions.unshift(`<a href="mailto:${esc(CONTACT.email)}?subject=${subject}&body=${body}" class="inline-flex items-center gap-2 rounded-full bg-maroon text-white px-5 py-3 text-sm font-semibold hover:bg-maroon-deep transition"><i data-lucide="mail" class="w-4 h-4"></i> Send by email</a>`);
+      $('#sendActions').innerHTML = actions.join('');
+      $('#doneText').textContent = CONTACT.email || CONTACT.whatsapp
+        ? 'Send it to our trade team with one tap below. We reply with pricing, minimums and lead times.'
+        : 'Copy your enquiry and send it to the ENA trade team. We reply with pricing, minimums and lead times.';
+      f.classList.add('hidden'); $('#enquiryDone').classList.remove('hidden');
+      refreshIcons();
+      $('#enquiryDone').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    async function copySummary() {
+      const text = $('#enquirySummary').textContent;
+      try { await navigator.clipboard.writeText(text); showToast('Enquiry copied'); }
+      catch (e) {
+        const r = document.createRange(); r.selectNodeContents($('#enquirySummary'));
+        const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        showToast('Selected. Press Ctrl/Cmd + C to copy');
+      }
     }
 
     /* ---------- Toast ---------- */
-    let toastTimer;
-    function showToast(msg) {
-      $('#toastText').textContent = msg;
-      const t = $('#toast');
-      t.classList.remove('translate-y-24', 'opacity-0');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => t.classList.add('translate-y-24', 'opacity-0'), 2400);
+    let tt;
+    function showToast(m) {
+      $('#toastText').textContent = m; const t = $('#toast');
+      t.classList.remove('translate-y-24', 'opacity-0'); clearTimeout(tt);
+      tt = setTimeout(() => t.classList.add('translate-y-24', 'opacity-0'), 2400);
     }
 
-    /* ---------- Event wiring ---------- */
+    /* ---------- Mobile menu ---------- */
+    function toggleMenu(open) {
+      const m = $('#mobileMenu'), b = $('#menuBtn');
+      const show = open === undefined ? m.classList.contains('hidden') : open;
+      if (!show && m.classList.contains('hidden')) return;
+      b.setAttribute('aria-expanded', String(show));
+      if (show) { m.classList.remove('hidden'); requestAnimationFrame(() => m.classList.remove('opacity-0', '-translate-y-2')); }
+      else { m.classList.add('opacity-0', '-translate-y-2'); setTimeout(() => m.classList.add('hidden'), 220); }
+    }
+
+    /* ---------- Events ---------- */
     document.addEventListener('click', (e) => {
       const t = e.target;
+      if (t.closest('#menuBtn')) { toggleMenu(); return; }
+      if (t.closest('#mobileMenu a')) { toggleMenu(false); return; }
 
-      const addBtn = t.closest('[data-add]');
-      if (addBtn) { e.stopPropagation(); addToCart(addBtn.dataset.add); return; }
+      const cs = t.closest('[data-cardswatch]');
+      if (cs) { e.stopPropagation(); const [id, j] = cs.dataset.cardswatch.split(':'); cardVariant[id] = Number(j); renderCatalog(); return; }
 
-      const card = t.closest('[data-open]');
-      if (card) { openModal(card.dataset.open); return; }
+      const enq = t.closest('[data-enquire]');
+      if (enq) {
+        e.stopPropagation();
+        const p = byId(enq.dataset.enquire), v = p.variants[cardVariant[p.id] || 0];
+        addPick(p.variants.length > 1 ? `${p.name} (${v.name})` : p.name); return;
+      }
+      const open = t.closest('[data-open]'); if (open) { openModal(open.dataset.open); return; }
+      const cat = t.closest('[data-category]'); if (cat) { setCat(cat.dataset.category); return; }
+      const tab = t.closest('[data-tab]'); if (tab) { setCat(tab.dataset.tab, false); return; }
+      const ff = t.closest('[data-footer-filter]'); if (ff) { setCat(ff.dataset.footerFilter); return; }
 
-      const bento = t.closest('[data-category]');
-      if (bento) { setCategory(bento.dataset.category); return; }
-
-      const tab = t.closest('[data-tab]');
-      if (tab) { setCategory(tab.dataset.tab, false); return; }
-
-      const nav = t.closest('[data-nav-filter]');
-      if (nav) { setCategory(nav.dataset.navFilter); return; }
-
-      const foot = t.closest('[data-footer-filter]');
-      if (foot) { setCategory(foot.dataset.footerFilter); return; }
-
-      if (t.closest('#clearQuery')) { $('#searchInput').value = ''; state.query = ''; renderCatalog(); return; }
-
-      const sw = t.closest('[data-swatch]');
-      if (sw) { modalState.color = Number(sw.dataset.swatch); renderModalSwatches(); return; }
-
+      const sw = t.closest('[data-swatch]'); if (sw) { modal.v = Number(sw.dataset.swatch); cardVariant[modal.id] = modal.v; renderModal(); renderCatalog(); return; }
+      const th = t.closest('[data-thumb]'); if (th) { const vi = byId(modal.id).variants.findIndex((x) => x.img === th.dataset.thumb); if (vi > -1 && vi !== modal.v) { modal.v = vi; cardVariant[modal.id] = vi; renderModal(); renderCatalog(); } else setModalImage(th.dataset.thumb); return; }
       if (t.closest('[data-close-modal]')) { closeModal(); return; }
 
-      if (t.closest('[data-close-cart]')) {
-        const goCatalog = !!t.closest('[data-goto-catalog]');
-        closeCart();
-        if (goCatalog) setTimeout(() => $('#catalog').scrollIntoView({ behavior: 'smooth' }), 150);
-        return;
-      }
-
-      const inc = t.closest('[data-inc]'); if (inc) { changeQty(inc.dataset.inc, 1); return; }
-      const dec = t.closest('[data-dec]'); if (dec) { changeQty(dec.dataset.dec, -1); return; }
-      const rem = t.closest('[data-remove]'); if (rem) { removeItem(rem.dataset.remove); return; }
+      const un = t.closest('[data-unpick]'); if (un) { state.picks.splice(Number(un.dataset.unpick), 1); savePicks(); renderPicks(); return; }
+      if (t.closest('#copyEnquiry')) { copySummary(); return; }
+      if (t.closest('#editEnquiry')) { $('#enquiryDone').classList.add('hidden'); $('#enquiryForm').classList.remove('hidden'); return; }
     });
 
-    // Keyboard: open cards with Enter/Space, close overlays with Escape
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        if (!$('#modal').classList.contains('hidden')) closeModal();
-        else if (isCartOpen()) closeCart();
-        return;
-      }
-      const card = e.target.closest && e.target.closest('[data-open]');
-      if (card && e.target === card && (e.key === 'Enter' || e.key === ' ')) {
-        e.preventDefault(); openModal(card.dataset.open);
-      }
+      if (e.key === 'Escape') { closeModal(); toggleMenu(false); return; }
+      const c = e.target.closest && e.target.closest('[data-open]');
+      if (c && e.target === c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openModal(c.dataset.open); }
     });
 
-    $('#cartButton').addEventListener('click', openCart);
-
-    $('#searchInput').addEventListener('input', (e) => { state.query = e.target.value; renderCatalog(); });
-    $('#searchInput').addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') { e.preventDefault(); $('#catalog').scrollIntoView({ behavior: 'smooth' }); }
-    });
-
-    $('#sortSelect').addEventListener('change', (e) => { state.sort = e.target.value; renderCatalog(); });
-
-    $('#clearFilters').addEventListener('click', () => {
-      state.query = ''; state.category = 'all';
-      $('#searchInput').value = '';
-      renderCatalog();
-    });
-
-    $('#modalMinus').addEventListener('click', () => {
-      modalState.qty = Math.max(1, modalState.qty - 1); $('#modalQty').textContent = modalState.qty;
-    });
-    $('#modalPlus').addEventListener('click', () => {
-      modalState.qty = Math.min(10, modalState.qty + 1); $('#modalQty').textContent = modalState.qty;
-    });
-    $('#modalAdd').addEventListener('click', () => {
-      addToCart(modalState.id, modalState.color, modalState.qty);
+    $('#modalEnquire').addEventListener('click', () => {
+      const p = byId(modal.id), v = p.variants[modal.v];
+      addPick(p.variants.length > 1 ? `${p.name} (${v.name})` : p.name);
       closeModal();
     });
-
-    $('#checkoutBtn').addEventListener('click', () => {
-      if (!state.cart.length) return;
-      showToast('Prototype checkout: no payment is taken in this demo');
-    });
-
-    $('#newsletter').addEventListener('submit', (e) => {
-      e.preventDefault();
-      $('#newsEmail').value = '';
-      showToast("You're on the list. Thank you!");
-    });
+    $('#searchInput').addEventListener('input', (e) => { state.q = e.target.value; renderCatalog(); });
+    $('#sortSelect').addEventListener('change', (e) => { state.sort = e.target.value; renderCatalog(); });
+    $('#clearFilters').addEventListener('click', () => { state.q = ''; state.cat = 'all'; $('#searchInput').value = ''; renderCatalog(); });
+    $('#enquiryForm').addEventListener('submit', handleSubmit);
 
     /* ---------- Init ---------- */
-    function updateCategoryCounts() {
-      $$('[data-count]').forEach((el) => {
-        const n = PRODUCTS.filter((p) => p.category === el.dataset.count).length;
-        el.textContent = `${n} ${n === 1 ? 'piece' : 'pieces'}`;
-      });
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-    updateCategoryCounts();
+    $$('[data-count]').forEach((el) => { const n = PRODUCTS.filter((p) => p.cat === el.dataset.count).length; el.textContent = `${n} designs`; });
+    $('#year').textContent = new Date().getFullYear();
+    renderContact();
     renderCatalog();
-    renderCart();
+    renderPicks();
     refreshIcons();
+  }
   </script>
 </body>
 </html>
